@@ -41,8 +41,12 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetMouseButton(0) && canFire)
         {
+            RoomManager manager = Object.FindFirstObjectByType<RoomManager>();
             canFire = false;
-            Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            if (manager != null && manager.currentRoomInstance != null)
+            {
+                Instantiate(bullet, bulletTransform.position, Quaternion.identity, manager.currentRoomInstance.transform);
+            }
         }
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class RoomManager : MonoBehaviour
 {
     public GameObject[] roomPrefabs;
-    private GameObject currentRoomInstance;
+    public GameObject currentRoomInstance;
     private int currentRoomIndex = 0;
     private TargetScript[] currentTargets;
 
