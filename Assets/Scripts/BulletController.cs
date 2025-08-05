@@ -8,6 +8,8 @@ public class BulletController : MonoBehaviour
     public float force;
     public float speed = 5f;
     Vector2 lastVelocity;
+    public bool recentlyTeleported = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
