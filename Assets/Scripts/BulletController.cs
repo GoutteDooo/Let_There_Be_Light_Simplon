@@ -16,11 +16,8 @@ public class BulletController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>(); // Access player's Rigidbody
         _mousePos = _mainCam.ScreenToWorldPoint(Input.mousePosition);
         Vector3 direction = _mousePos - transform.position;
-        _rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * force;
-
-
         // On applique une force initiale vers le haut et sur le côté
-        //_rb.AddForce(new Vector2(0f, 0f), ForceMode2D.Impulse);
+        _rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * force;
     }
 
     // Update is called once per frame

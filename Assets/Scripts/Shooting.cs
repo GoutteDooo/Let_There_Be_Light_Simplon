@@ -8,6 +8,8 @@ public class Shooting : MonoBehaviour
     public GameObject bullet; // bullet that will be instantiated
     public Transform bulletTransform; // gun
     public bool canFire; // to know when player can fire
+    private float _timer;
+    public float timeBetweenFiring;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,7 +29,15 @@ public class Shooting : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
-        if (!canFire) return; // TODO : Set canFire to true when there is no bullet left in the room
+        if (!canFire)
+        {
+            _timer += Time.deltaTime;
+            if(_timer > timeBetweenFiring)
+            {
+                canFire = true;
+                _timer = 0;
+            }
+        } // TODO : Set canFire to true when there is no bullet left in the room
 
         if (Input.GetMouseButton(0) && canFire)
         {
