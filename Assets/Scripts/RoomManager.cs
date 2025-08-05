@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
-    public GameObject[] rooms;
+    public GameObject[] roomPrefabs;
+    private GameObject currentRoomInstance;
     private int currentRoomIndex = 0;
     private TargetScript[] currentTargets;
 
@@ -35,24 +36,23 @@ public class RoomManager : MonoBehaviour
 
     void LoadRoom(int index)
     {
-        // Désactive toutes les rooms sauf celle à l’index
-        for (int i = 0; i < rooms.Length; i++)
-            rooms[i].SetActive(i == index);
+        // Détruire la room actuelle
+        if (currentRoomInstance != null)
+            Destroy(currentRoomInstance);
 
-        currentRoomIndex = index;
+        // Créer la nouvelle room (ou la même, ça dépend d'où est appelée la méthode)
+        currentRoomInstance = Instantiate(roomPrefabs[index]);
 
         // Récupère les targets dans cette room
-        currentTargets = rooms[currentRoomIndex].GetComponentsInChildren<TargetScript>();
+        currentTargets = currentRoomInstance.GetComponentsInChildren<TargetScript>();
         Debug.Log($"Room {index} chargée avec {currentTargets.Length} target(s).");
     }
 
     public void LoadNextRoom()
     {
-        // Désactiver l’actuelle
-        rooms[currentRoomIndex].SetActive(false);
         currentRoomIndex++;
 
-        if (currentRoomIndex < rooms.Length)
+        if (currentRoomIndex < roomPrefabs.Length)
         {
             LoadRoom(currentRoomIndex);
         }
@@ -64,15 +64,7 @@ public class RoomManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        // Désactive la room actuelle (pour réinitialiser ses enfants)
-        rooms[currentRoomIndex].SetActive(false);
-
-        // Réactive la même room (pour recharger ses objets par défaut)
-        rooms[currentRoomIndex].SetActive(true);
-
-        // Recollecte les cibles à nouveau (car elles viennent d'être réinstanciées)
-        currentTargets = rooms[currentRoomIndex].GetComponentsInChildren<TargetScript>();
-
+        LoadRoom(currentRoomIndex);
         Debug.Log($"Room {currentRoomIndex} redémarrée.");
     }
 }

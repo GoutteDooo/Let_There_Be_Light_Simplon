@@ -8,7 +8,15 @@ public class TargetScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Color color;
+        if (ColorUtility.TryParseHtmlString("#D4C477", out color)) // remplace par ton code hex
+        {
+            sprite.color = color;
+        }
+        else
+        {
+            Debug.LogWarning("Code couleur invalide !");
+        }
     }
 
     // Update is called once per frame

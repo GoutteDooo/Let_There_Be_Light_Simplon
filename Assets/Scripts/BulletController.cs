@@ -46,10 +46,11 @@ public class BulletController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             RoomManager manager = Object.FindFirstObjectByType<RoomManager>();
+            //Debug.Log("manager: ", manager);
             if (manager != null)
                 manager.RestartLevel();
         }
-        Debug.Log("La balle a touché : " + collision.gameObject.name);
+        //Debug.Log("La balle a touché : " + collision.gameObject.name);
         var speed = lastVelocity.magnitude;
         var direction = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
