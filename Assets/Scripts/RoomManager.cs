@@ -61,4 +61,18 @@ public class RoomManager : MonoBehaviour
             Debug.Log("Fin du jeu !");
         }
     }
+
+    public void RestartLevel()
+    {
+        // Désactive la room actuelle (pour réinitialiser ses enfants)
+        rooms[currentRoomIndex].SetActive(false);
+
+        // Réactive la même room (pour recharger ses objets par défaut)
+        rooms[currentRoomIndex].SetActive(true);
+
+        // Recollecte les cibles à nouveau (car elles viennent d'être réinstanciées)
+        currentTargets = rooms[currentRoomIndex].GetComponentsInChildren<TargetScript>();
+
+        Debug.Log($"Room {currentRoomIndex} redémarrée.");
+    }
 }

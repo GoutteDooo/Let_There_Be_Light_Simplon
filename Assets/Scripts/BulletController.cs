@@ -9,6 +9,8 @@ public class BulletController : MonoBehaviour
     public float speed = 5f;
     Vector2 lastVelocity;
     public bool recentlyTeleported = false;
+    private float _timer;
+    public float livingTime;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,23 +22,41 @@ public class BulletController : MonoBehaviour
         Vector3 direction = _mousePos - transform.position;
         // On applique une force initiale vers le haut et sur le côté
         _rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * force;
+
+        // TODO : Récupérer le temps de feu à partir du niveau actuel
+        // Actuellement, on va set à 7s
+        livingTime = 7f;
     }
 
     // Update is called once per frame
     void Update()
     {
         lastVelocity = _rb.linearVelocity;
+        _timer += Time.deltaTime;
+        // Détruire la bullet après un certain temps
+        if (_timer > livingTime)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        // Si balle touche joueur, relancer la partie
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            RoomManager manager = Object.FindFirstObjectByType<RoomManager>();
+            if (manager != null)
+                manager.RestartLevel();
+        }
         Debug.Log("La balle a touché : " + collision.gameObject.name);
         var speed = lastVelocity.magnitude;
         var direction = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
         _rb.linearVelocity = direction * Mathf.Max(speed, 0f);
 
-        if (collision.gameObject.layer == 6)
+        // Si elle touche une target ou le joueur, ou si elle dépasse un certain temps, on la détruit
+        if (collision.gameObject.layer == 6 || collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }
