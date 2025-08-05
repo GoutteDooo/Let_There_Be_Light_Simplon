@@ -9,7 +9,9 @@ public class RoomManager : MonoBehaviour
 
     void Start()
     {
-        LoadRoom(0); // Début du jeu
+        currentRoomIndex = 2;//DEV
+        LoadRoom(2);//DEV
+        //LoadRoom(0); // Début du jeu
     }
 
     void Update()
