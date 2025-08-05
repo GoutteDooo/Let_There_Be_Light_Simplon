@@ -23,8 +23,6 @@ public class TargetScript : MonoBehaviour
             isTargetActive = true;
             sprite.color = Color.yellow;
             Debug.Log("Target is active");
-            // POUR L'INSTANT, ON CHARGE LE NIVEAU SUIVANT DIRECTEMENT, MAIS ON CHANGERA CA PLUS TARD
-            Object.FindFirstObjectByType<RoomManager>().LoadNextRoom(); // Charge la room suivante
         }
     }
 }
