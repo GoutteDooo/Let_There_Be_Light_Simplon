@@ -1,3 +1,4 @@
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
 public class PortalLogic : MonoBehaviour
@@ -6,6 +7,7 @@ public class PortalLogic : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Checks if the object that collided is on the 3rd layer and that a portal is linked
         if (collision.gameObject.layer == 3 && linkedPortal != null)
         {
             BulletController bullet = collision.gameObject.GetComponent<BulletController>();
@@ -39,6 +41,7 @@ public class PortalLogic : MonoBehaviour
 
     private System.Collections.IEnumerator ResetTeleportFlag(BulletController bullet)
     {
+        // Set a delay before being able to teleport again, prevents infinite tp
         yield return new WaitForSeconds(0.5f);
         bullet.recentlyTeleported = false;
     }
