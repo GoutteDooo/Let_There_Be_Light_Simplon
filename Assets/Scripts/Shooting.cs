@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour
@@ -6,7 +7,7 @@ public class Shooting : MonoBehaviour
     private Vector3 mousePos;
     public GameObject bullet; // bullet that will be instantiated
     public Transform bulletTransform; // gun
-    public bool canFire; // to know where player can fire
+    public bool canFire; // to know when player can fire
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
