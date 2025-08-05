@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9205292289891276199}
   - component: {fileID: 2568493256848005676}
+  - component: {fileID: 8426135590107392647}
   m_Layer: 0
   m_Name: Perimetre
   m_TagString: Untagged
@@ -87,6 +88,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8426135590107392647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186965743015532626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ec182c5909079a428b1b102d66edfc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6458766053815584662
 GameObject:
   m_ObjectHideFlags: 0
