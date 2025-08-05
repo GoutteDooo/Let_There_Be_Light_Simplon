@@ -20,7 +20,7 @@ public class BulletController : MonoBehaviour
 
 
         // On applique une force initiale vers le haut et sur le côté
-        _rb.AddForce(new Vector2(5f, 2f), ForceMode2D.Impulse);
+        //_rb.AddForce(new Vector2(0f, 0f), ForceMode2D.Impulse);
     }
 
     // Update is called once per frame
