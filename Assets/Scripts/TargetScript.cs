@@ -8,7 +8,15 @@ public class TargetScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Color color;
+        if (ColorUtility.TryParseHtmlString("#D4C477", out color)) // remplace par ton code hex
+        {
+            sprite.color = color;
+        }
+        else
+        {
+            Debug.LogWarning("Code couleur invalide !");
+        }
     }
 
     // Update is called once per frame
@@ -23,8 +31,6 @@ public class TargetScript : MonoBehaviour
             isTargetActive = true;
             sprite.color = Color.yellow;
             Debug.Log("Target is active");
-            // POUR L'INSTANT, ON CHARGE LE NIVEAU SUIVANT DIRECTEMENT, MAIS ON CHANGERA CA PLUS TARD
-            Object.FindFirstObjectByType<RoomManager>().LoadNextRoom(); // Charge la room suivante
         }
     }
 }

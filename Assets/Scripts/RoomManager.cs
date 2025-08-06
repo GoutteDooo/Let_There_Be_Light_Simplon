@@ -2,33 +2,71 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
-    public GameObject[] rooms; // tableau contenant toutes les rooms
-    private int currentRoomIndex = 0; // index permettant de savoir où l'on se situe dans le jeu
+    public GameObject[] roomPrefabs;
+    public GameObject currentRoomInstance;
+    private int currentRoomIndex = 0;
+    private TargetScript[] currentTargets;
 
     void Start()
     {
-        // Désactiver toutes les rooms sauf la première (au cas où ça n'a pas déjà été fait)
-        for (int i = 0; i < rooms.Length; i++)
-            rooms[i].SetActive(i == currentRoomIndex);
+        currentRoomIndex = 2;//DEV
+        LoadRoom(2);//DEV
+        //LoadRoom(0); // Début du jeu
+    }
+
+    void Update()
+    {
+        if (currentTargets != null && currentTargets.Length > 0)
+        {
+            bool allTargetsActive = true;
+
+            foreach (var target in currentTargets)
+            {
+                if (!target.isTargetActive)
+                {
+                    allTargetsActive = false;
+                    break;
+                }
+            }
+
+            if (allTargetsActive)
+            {
+                LoadNextRoom();
+            }
+        }
+    }
+
+    void LoadRoom(int index)
+    {
+        // Détruire la room actuelle
+        if (currentRoomInstance != null)
+            Destroy(currentRoomInstance);
+
+        // Créer la nouvelle room (ou la même, ça dépend d'où est appelée la méthode)
+        currentRoomInstance = Instantiate(roomPrefabs[index]);
+
+        // Récupère les targets dans cette room
+        currentTargets = currentRoomInstance.GetComponentsInChildren<TargetScript>();
+        Debug.Log($"Room {index} chargée avec {currentTargets.Length} target(s).");
     }
 
     public void LoadNextRoom()
     {
-        // Désactiver l’actuelle
-        rooms[currentRoomIndex].SetActive(false);
-
-        // Incrémenter l’index
         currentRoomIndex++;
 
-        if (currentRoomIndex < rooms.Length)
+        if (currentRoomIndex < roomPrefabs.Length)
         {
-            // Activer la suivante
-            rooms[currentRoomIndex].SetActive(true);
+            LoadRoom(currentRoomIndex);
         }
         else
         {
-            Debug.Log("Fin du jeu ou pas d'autres rooms !");
-            // Tu peux afficher un menu de fin ou relancer le jeu
+            Debug.Log("Fin du jeu !");
         }
+    }
+
+    public void RestartLevel()
+    {
+        LoadRoom(currentRoomIndex);
+        Debug.Log($"Room {currentRoomIndex} redémarrée.");
     }
 }
