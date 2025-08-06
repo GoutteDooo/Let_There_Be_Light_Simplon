@@ -30,6 +30,10 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Si l'état du jeu n'est pas sur "Play", on désactive la possibilité de tirer
+        if (GameStateManager.Instance.CurrentState != GameState.Playing)
+            return;
+
         // Récupère la position du curseur sur l'écran
         mousePos = _mainCam.ScreenToWorldPoint(Input.mousePosition);
         // Définit la position du bras
@@ -57,6 +61,7 @@ public class Shooting : MonoBehaviour
             {
                 Instantiate(bullet, bulletTransform.position, Quaternion.identity, manager.currentRoomInstance.transform);
                 bulletLefts -= 1;
+                Debug.Log("BCL : " + FindFirstObjectByType<BulletsCountdownLogic>());
                 FindFirstObjectByType<BulletsCountdownLogic>().DisplayBullets();
                 _hasShot = true; // Lance le timer plus haut
                 Debug.Log("balles restantes : " + bulletLefts);
@@ -65,13 +70,12 @@ public class Shooting : MonoBehaviour
     }
 
     /**
-     * Renvoie true si le joueur peut encore tirer des balles à partir de _bulletStock;
+     * Renvoie true si le joueur peut encore tirer des balles
      */
     private bool CanFire()
     {
         return bulletLefts > 0 && !_hasShot;
     }
-
     /**
      * Retourne true si bullets restantes
      */
