@@ -26,7 +26,7 @@ public class TargetScript : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 3)
+        if (collision.gameObject.layer == 3 && !isTargetActive)
         {
             isTargetActive = true;
             sprite.color = Color.yellow;
