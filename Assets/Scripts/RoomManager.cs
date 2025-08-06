@@ -7,7 +7,8 @@ public class RoomManager : MonoBehaviour
     public GameObject currentRoomInstance;
     private int currentRoomIndex = 0;
     private TargetScript[] currentTargets;
-    public GameObject menu;
+    public GameObject levelCompleteMenu;
+    
 
     void Start()
     {
@@ -33,7 +34,7 @@ public class RoomManager : MonoBehaviour
 
             if (allTargetsActive)
             {
-                menu.SetActive(true);
+                levelCompleteMenu.SetActive(true);
             }
         }
     }
@@ -62,7 +63,7 @@ public class RoomManager : MonoBehaviour
         }
         else
         {
-            menu.SetActive(false);
+            levelCompleteMenu.SetActive(false);
             SceneManager.LoadScene("StartScreen");
             Debug.Log("Fin du jeu !");
         }
