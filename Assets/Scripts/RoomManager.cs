@@ -10,21 +10,23 @@ public class RoomManager : MonoBehaviour
     public GameObject levelCompleteMenu;
     private float failCheckTimer = 0f;
     private bool roomJustLoaded = true;
+    public GameObject bDisplay;
 
     void Start()
     {
         currentRoomIndex = 0;//DEV
         LoadRoom(0);//DEV
-        //LoadRoom(0); // Début du jeu
+        //LoadRoom(0); // Début du jeu 
     }
 
     void Update()
     {
         if (roomJustLoaded)
         {
+            
             failCheckTimer += Time.deltaTime;
             if (failCheckTimer >= 0.5f)
-            {
+            { 
                 roomJustLoaded = false;
             }
         }
@@ -44,6 +46,7 @@ public class RoomManager : MonoBehaviour
 
             if (allTargetsActive)
             {
+                bDisplay.SetActive(false);
                 levelCompleteMenu.SetActive(true);
             }
         }
@@ -51,6 +54,7 @@ public class RoomManager : MonoBehaviour
         if (NoBulletLefts() && !roomJustLoaded)
         {
             LevelFailScript failMenu = GameObject.FindFirstObjectByType<LevelFailScript>();
+            bDisplay.SetActive(false);
             failMenu.menu.SetActive(true);
         }
     }
@@ -66,6 +70,14 @@ public class RoomManager : MonoBehaviour
 
         failCheckTimer = 0f;
         roomJustLoaded = true;
+
+        BulletsCountdownLogic ui = GameObject.FindFirstObjectByType<BulletsCountdownLogic>();
+        if (ui != null)
+        {
+            ui.RefreshShootingReference();
+        }
+
+        bDisplay.SetActive(true);
 
         // Récupère les targets dans cette room
         currentTargets = currentRoomInstance.GetComponentsInChildren<TargetScript>();
@@ -83,6 +95,7 @@ public class RoomManager : MonoBehaviour
         }
         else
         {
+            bDisplay.SetActive(false);
             levelCompleteMenu.SetActive(false);
             SceneManager.LoadScene("EndScreen");
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("EndScreen"));
