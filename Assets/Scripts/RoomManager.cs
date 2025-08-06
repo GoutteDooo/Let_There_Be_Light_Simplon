@@ -21,6 +21,8 @@ public class RoomManager : MonoBehaviour
 
     void Update()
     {
+        if (GameStateManager.Instance.CurrentState != GameState.Playing)
+            return;
         // Léger timing pour interrompre l'update lors de la transition de room
         if (roomJustLoaded)
         {
@@ -126,10 +128,12 @@ public class RoomManager : MonoBehaviour
     {
         // R�cup�rer l'instance de Shooting de la room
         Shooting shooter = Object.FindFirstObjectByType<Shooting>();
-        //Debug.Log("RoomManager, Bulletlefts: " + test.HasBulletLefts());
+        if (shooter == null)
+            return false;
+
         // V�rifier que le nombre de Bullets dans la room est de 0
         bool isBulletsInRoom = Object.FindFirstObjectByType<BulletController>();
-        //Debug.Log(isBulletsInRoom ? "Y'en a" : "Plus de Bullets");
+
         // V�rifier si au moins une target est inactive
         bool allTargetsActive = true;
         foreach(var target in currentTargets)
@@ -140,6 +144,7 @@ public class RoomManager : MonoBehaviour
                 break;
             }
         }
+
         return !shooter.HasBulletLefts() && !isBulletsInRoom && !allTargetsActive;
     }
 }

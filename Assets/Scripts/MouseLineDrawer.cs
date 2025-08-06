@@ -1,15 +1,30 @@
+using UnityEditor;
 using UnityEngine;
 
+/**
+ * Instanciée à chaque nouveau chargement de room
+ */
 public class MouseLineDrawer : MonoBehaviour
 {
     public LineRenderer lineRenderer;
     public LayerMask obstacleMask;  // Masque de collision pour filtrer les obstacles
+    void OnEnable()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
 
+    void OnDisable()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+
+    void OnGameStateChanged(GameState newState)
+    {
+        // Si l'état du jeu n'est pas sur "Play", on désactive le drawer
+        gameObject.SetActive(newState == GameState.Playing);
+    }
     void Update()
     {
-        if (GameStateManager.Instance.CurrentState != GameState.Playing)
-            return;
-
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseWorldPos.z = 0f;
 

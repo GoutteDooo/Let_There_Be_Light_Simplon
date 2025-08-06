@@ -18,6 +18,21 @@ public class Shooting : MonoBehaviour
     private bool _hasShot; // Pour définir un timing entre les tirs
     private float _timer;
     private readonly float _timeBetweenFiring = 0.3f;
+    void OnEnable()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    void OnDisable()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+
+    void OnGameStateChanged(GameState newState)
+    {
+        // Si l'état du jeu n'est pas sur "Play", on désactive le drawer
+        gameObject.SetActive(newState == GameState.Playing);
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,10 +45,6 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Si l'état du jeu n'est pas sur "Play", on désactive la possibilité de tirer
-        if (GameStateManager.Instance.CurrentState != GameState.Playing)
-            return;
-
         // Récupère la position du curseur sur l'écran
         mousePos = _mainCam.ScreenToWorldPoint(Input.mousePosition);
         // Définit la position du bras
