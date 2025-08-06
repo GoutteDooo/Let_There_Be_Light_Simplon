@@ -12,8 +12,8 @@ public class RoomManager : MonoBehaviour
 
     void Start()
     {
-        currentRoomIndex = 0;//DEV
-        LoadRoom(0);//DEV
+        currentRoomIndex = 3;//DEV
+        LoadRoom(currentRoomIndex);//DEV
         //LoadRoom(0); // Début du jeu
     }
 
@@ -40,6 +40,7 @@ public class RoomManager : MonoBehaviour
         // Managing Restart level
         if (NoBulletLefts())
         {
+            return;
             RestartLevel();
         }
     }
