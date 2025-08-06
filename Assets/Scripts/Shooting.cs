@@ -30,6 +30,8 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameStateManager.Instance.CurrentState != GameState.Playing)
+            return;
         // Récupère la position du curseur sur l'écran
         mousePos = _mainCam.ScreenToWorldPoint(Input.mousePosition);
         // Définit la position du bras

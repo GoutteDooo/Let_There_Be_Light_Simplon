@@ -14,7 +14,7 @@ public class RoomManager : MonoBehaviour
 
     void Start()
     {
-        currentRoomIndex = 2;//DEV
+        currentRoomIndex = 0;//DEV
         LoadRoom(currentRoomIndex);//DEV
         //LoadRoom(0); // Début du jeu
     }
@@ -51,15 +51,19 @@ public class RoomManager : MonoBehaviour
             if (allTargetsActive)
             {
                 bDisplay.SetActive(false);
-                levelCompleteMenu.SetActive(true);
+                //levelCompleteMenu.SetActive(true);
+                GameStateManager.Instance.SetState(GameState.Won);
             }
         }
         // Managing Restart level
         if (NoBulletLefts())
         {
-            LevelFailScript failMenu = GameObject.FindFirstObjectByType<LevelFailScript>();
+            //LevelFailScript failMenu = GameObject.FindFirstObjectByType<LevelFailScript>();
+            //failMenu.menu.SetActive(true);
+
+            /* On change l'état à Lost et failMenu s'affichera de lui-même */
             bDisplay.SetActive(false);
-            failMenu.menu.SetActive(true);
+            GameStateManager.Instance.SetState(GameState.Lost);
         }
     }
 
@@ -87,12 +91,14 @@ public class RoomManager : MonoBehaviour
         // Récupère les targets dans cette room
         currentTargets = currentRoomInstance.GetComponentsInChildren<TargetScript>();
 
+        // Et on joue
+        if (roomJustLoaded) // On attend que la transition se fasse avant
+            GameStateManager.Instance.SetState(GameState.Playing);
     }
 
     public void LoadNextRoom()
     {
         currentRoomIndex++;
-
         if (currentRoomIndex < roomPrefabs.Length)
         {
             LoadRoom(currentRoomIndex);
@@ -110,11 +116,11 @@ public class RoomManager : MonoBehaviour
     public void RestartLevel()
     {
         LoadRoom(currentRoomIndex);
-        Debug.Log($"Room {currentRoomIndex} red�marr�e.");
+        //Debug.Log($"Room {currentRoomIndex} red�marr�e.");
     }
 
     /**
-     * Retourne true s'il n'y a plus de stock de bullets ni d'instance de Bullet dans la room (et qu'il y'a au moins une target inactive)
+     * Retourne true s'il n'y a plus de stock de bullets ni d'instance de Bullet dans la room
      */
     private bool NoBulletLefts()
     {

@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,23 @@ public class BulletsCountdownLogic : MonoBehaviour
 
     void Start()
     {
+    }
+    void OnEnable()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    void OnDisable()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+
+    void OnGameStateChanged(GameState newState)
+    {
+        if (newState != GameState.Playing)
+            gameObject.SetActive(false);
+        else
+            gameObject.SetActive(true);
     }
 
     void Update()
