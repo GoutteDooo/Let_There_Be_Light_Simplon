@@ -3,17 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class MenuLogic : MonoBehaviour
 {
-    public GameObject startScreen;
+    public GameObject menu;
 
     void Start()
     {
-        startScreen.SetActive(true);
+        menu.SetActive(true);
     }
 
     public void StartGame()
     {
-        startScreen.SetActive(false);
+        menu.SetActive(false);
         Debug.Log("Game Started");
         SceneManager.LoadScene("Rooms");
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName("Rooms"));
+        SceneManager.UnloadSceneAsync("StartScreen");
     }
 }
