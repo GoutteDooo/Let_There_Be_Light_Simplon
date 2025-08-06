@@ -14,7 +14,7 @@ public class Shooting : MonoBehaviour
     private Vector3 mousePos;
     public GameObject bullet; // bullet that will be instantiated
     public Transform bulletTransform; // gun
-    private int _bulletLefts; // Stock restant de bullet
+    private int bulletLefts { get; set; } // Stock restant de bullet
     private bool _hasShot; // Pour définir un timing entre les tirs
     private float _timer;
     private readonly float _timeBetweenFiring = 0.3f;
@@ -24,7 +24,7 @@ public class Shooting : MonoBehaviour
     {
         _hasShot = false;
         _mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        _bulletLefts = GameObject.FindFirstObjectByType<RoomData>().bulletStock;
+        bulletLefts = GameObject.FindFirstObjectByType<RoomData>().bulletStock;
     }
 
     // Update is called once per frame
@@ -56,9 +56,10 @@ public class Shooting : MonoBehaviour
             if (manager != null && manager.currentRoomInstance != null)
             {
                 Instantiate(bullet, bulletTransform.position, Quaternion.identity, manager.currentRoomInstance.transform);
-                _bulletLefts -= 1;
+                bulletLefts -= 1;
+                FindFirstObjectByType<BulletsCountdownLogic>().DisplayBullets();
                 _hasShot = true; // Lance le timer plus haut
-                Debug.Log("balles restantes : " + _bulletLefts);
+                Debug.Log("balles restantes : " + bulletLefts);
             }
         }
     }
@@ -68,7 +69,7 @@ public class Shooting : MonoBehaviour
      */
     private bool CanFire()
     {
-        return _bulletLefts > 0 && !_hasShot;
+        return bulletLefts > 0 && !_hasShot;
     }
 
     /**
@@ -76,6 +77,10 @@ public class Shooting : MonoBehaviour
      */
     public bool HasBulletLefts()
     {
-        return _bulletLefts > 0;
+        return bulletLefts > 0;
+    }
+    public int GetBulletLefts()
+    {
+        return bulletLefts;
     }
 }
