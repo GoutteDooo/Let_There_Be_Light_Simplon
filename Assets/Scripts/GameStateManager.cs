@@ -23,6 +23,8 @@ public class GameStateManager : MonoBehaviour
             return;
         }
         Instance = this;
+        // Rend l'objet invulnérable au changement de scene (cycle de vie infini)
+        DontDestroyOnLoad(gameObject);
     }
 
     // Publique pour changement d'état

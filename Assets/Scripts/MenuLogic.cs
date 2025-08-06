@@ -7,6 +7,7 @@ public class MenuLogic : MonoBehaviour
 
     void Start()
     {
+        GameStateManager.Instance.SetState(GameState.Paused);
     }
 
     public void StartGame()
