@@ -211,7 +211,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 6015958609971296620}
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!1 &3505548357459726746
 GameObject:
   m_ObjectHideFlags: 0
