@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class RoomManager : MonoBehaviour
     public GameObject currentRoomInstance;
     private int currentRoomIndex = 0;
     private TargetScript[] currentTargets;
+    public GameObject levelCompleteMenu;
+    
 
     void Start()
     {
@@ -31,7 +34,7 @@ public class RoomManager : MonoBehaviour
 
             if (allTargetsActive)
             {
-                LoadNextRoom();
+                levelCompleteMenu.SetActive(true);
             }
         }
         // Managing Restart level
@@ -66,6 +69,8 @@ public class RoomManager : MonoBehaviour
         }
         else
         {
+            levelCompleteMenu.SetActive(false);
+            SceneManager.LoadScene("StartScreen");
             Debug.Log("Fin du jeu !");
         }
     }

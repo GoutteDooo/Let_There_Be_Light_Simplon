@@ -45,10 +45,8 @@ public class BulletController : MonoBehaviour
         // Si balle touche joueur, relancer la partie
         if (collision.gameObject.CompareTag("Player"))
         {
-            RoomManager manager = Object.FindFirstObjectByType<RoomManager>();
-            //Debug.Log("manager: ", manager);
-            if (manager != null)
-                manager.RestartLevel();
+            LevelFailScript failMenu = GameObject.FindFirstObjectByType<LevelFailScript>();
+            failMenu.menu.SetActive(true);
         }
         //Debug.Log("La balle a touché : " + collision.gameObject.name);
         var speed = lastVelocity.magnitude;
