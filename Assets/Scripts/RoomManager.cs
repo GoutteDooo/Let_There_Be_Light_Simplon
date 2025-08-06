@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviour
 {
@@ -6,11 +7,12 @@ public class RoomManager : MonoBehaviour
     public GameObject currentRoomInstance;
     private int currentRoomIndex = 0;
     private TargetScript[] currentTargets;
+    public GameObject menu;
 
     void Start()
     {
-        currentRoomIndex = 2;//DEV
-        LoadRoom(2);//DEV
+        currentRoomIndex = 0;//DEV
+        LoadRoom(0);//DEV
         //LoadRoom(0); // Début du jeu
     }
 
@@ -31,7 +33,7 @@ public class RoomManager : MonoBehaviour
 
             if (allTargetsActive)
             {
-                LoadNextRoom();
+                menu.SetActive(true);
             }
         }
     }
@@ -60,6 +62,8 @@ public class RoomManager : MonoBehaviour
         }
         else
         {
+            menu.SetActive(false);
+            SceneManager.LoadScene("StartScreen");
             Debug.Log("Fin du jeu !");
         }
     }
