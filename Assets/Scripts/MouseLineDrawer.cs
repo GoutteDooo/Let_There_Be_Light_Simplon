@@ -7,6 +7,9 @@ public class MouseLineDrawer : MonoBehaviour
 
     void Update()
     {
+        if (GameStateManager.Instance.CurrentState != GameState.Playing)
+            return;
+
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseWorldPos.z = 0f;
 

@@ -30,6 +30,10 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Si l'état du jeu n'est pas sur "Play", on désactive la possibilité de tirer
+        if (GameStateManager.Instance.CurrentState != GameState.Playing)
+            return;
+
         // Récupère la position du curseur sur l'écran
         mousePos = _mainCam.ScreenToWorldPoint(Input.mousePosition);
         // Définit la position du bras
@@ -66,13 +70,12 @@ public class Shooting : MonoBehaviour
     }
 
     /**
-     * Renvoie true si le joueur peut encore tirer des balles à partir de _bulletStock;
+     * Renvoie true si le joueur peut encore tirer des balles
      */
     private bool CanFire()
     {
         return bulletLefts > 0 && !_hasShot;
     }
-
     /**
      * Retourne true si bullets restantes
      */
