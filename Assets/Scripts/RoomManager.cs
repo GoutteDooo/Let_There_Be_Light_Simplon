@@ -16,7 +16,7 @@ public class RoomManager : MonoBehaviour
     {
         currentRoomIndex = 0;//DEV
         LoadRoom(0);//DEV
-        //LoadRoom(0); // Début du jeu 
+        //LoadRoom(0); // DÃ©but du jeu 
     }
 
     void Update()
@@ -61,11 +61,11 @@ public class RoomManager : MonoBehaviour
 
     void LoadRoom(int index)
     {
-        // Détruire la room actuelle
+        // DÃ©truire la room actuelle
         if (currentRoomInstance != null)
             Destroy(currentRoomInstance);
 
-        // Créer la nouvelle room (ou la même, ça dépend d'où est appelée la méthode)
+        // CrÃ©er la nouvelle room (ou la mÃªme, Ã§a dÃ©pend d'oÃ¹ est appelÃ©e la mÃ©thode)
         currentRoomInstance = Instantiate(roomPrefabs[index]);
 
         failCheckTimer = 0f;
@@ -79,9 +79,9 @@ public class RoomManager : MonoBehaviour
 
         bDisplay.SetActive(true);
 
-        // Récupère les targets dans cette room
+        // RÃ©cupÃ¨re les targets dans cette room
         currentTargets = currentRoomInstance.GetComponentsInChildren<TargetScript>();
-        //Debug.Log($"Room {index} chargée avec {currentTargets.Length} target(s).");
+        //Debug.Log($"Room {index} chargÃ©e avec {currentTargets.Length} target(s).");
 
     }
 
@@ -106,7 +106,7 @@ public class RoomManager : MonoBehaviour
     public void RestartLevel()
     {
         LoadRoom(currentRoomIndex);
-        Debug.Log($"Room {currentRoomIndex} redémarrée.");
+        Debug.Log($"Room {currentRoomIndex} redÃ©marrÃ©e.");
     }
 
     /**
@@ -114,13 +114,13 @@ public class RoomManager : MonoBehaviour
      */
     private bool NoBulletLefts()
     {
-        // Récupérer l'instance de Shooting de la room
+        // RÃ©cupÃ©rer l'instance de Shooting de la room
         Shooting shooter = Object.FindFirstObjectByType<Shooting>();
         //Debug.Log("RoomManager, Bulletlefts: " + test.HasBulletLefts());
-        // Vérifier que le nombre de Bullets dans la room est de 0
+        // VÃ©rifier que le nombre de Bullets dans la room est de 0
         bool isBulletsInRoom = Object.FindFirstObjectByType<BulletController>();
         //Debug.Log(isBulletsInRoom ? "Y'en a" : "Plus de Bullets");
-        // Vérifier si au moins une target est inactive
+        // VÃ©rifier si au moins une target est inactive
         bool allTargetsActive = true;
         foreach(var target in currentTargets)
         {
