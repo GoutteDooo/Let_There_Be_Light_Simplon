@@ -9,8 +9,8 @@ public class RoomManager : MonoBehaviour
 
     void Start()
     {
-        currentRoomIndex = 2;//DEV
-        LoadRoom(2);//DEV
+        currentRoomIndex = 0;//DEV
+        LoadRoom(0);//DEV
         //LoadRoom(0); // Début du jeu
     }
 
@@ -34,6 +34,11 @@ public class RoomManager : MonoBehaviour
                 LoadNextRoom();
             }
         }
+        // Managing Restart level
+        if (NoBulletLefts())
+        {
+            RestartLevel();
+        }
     }
 
     void LoadRoom(int index)
@@ -47,7 +52,8 @@ public class RoomManager : MonoBehaviour
 
         // Récupère les targets dans cette room
         currentTargets = currentRoomInstance.GetComponentsInChildren<TargetScript>();
-        Debug.Log($"Room {index} chargée avec {currentTargets.Length} target(s).");
+        //Debug.Log($"Room {index} chargée avec {currentTargets.Length} target(s).");
+
     }
 
     public void LoadNextRoom()
@@ -68,5 +74,29 @@ public class RoomManager : MonoBehaviour
     {
         LoadRoom(currentRoomIndex);
         Debug.Log($"Room {currentRoomIndex} redémarrée.");
+    }
+
+    /**
+     * Retourne true s'il n'y a plus de stock de bullets ni d'instance de Bullet dans la room (et qu'il y'a au moins une target inactive)
+     */
+    private bool NoBulletLefts()
+    {
+        // Récupérer l'instance de Shooting de la room
+        Shooting shooter = Object.FindFirstObjectByType<Shooting>();
+        //Debug.Log("RoomManager, Bulletlefts: " + test.HasBulletLefts());
+        // Vérifier que le nombre de Bullets dans la room est de 0
+        bool isBulletsInRoom = Object.FindFirstObjectByType<BulletController>();
+        Debug.Log(isBulletsInRoom ? "Y'en a" : "Plus de Bullets");
+        // Vérifier si au moins une target est inactive
+        bool allTargetsActive = true;
+        foreach(var target in currentTargets)
+        {
+            if (!target.isTargetActive)
+            {
+                allTargetsActive = false;
+                break;
+            }
+        }
+        return !shooter.HasBulletLefts() && !isBulletsInRoom && !allTargetsActive;
     }
 }

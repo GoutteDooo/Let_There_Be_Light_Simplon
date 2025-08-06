@@ -17,7 +17,7 @@ public class Shooting : MonoBehaviour
     private int _bulletLefts; // Stock restant de bullet
     private bool _hasShot; // Pour définir un timing entre les tirs
     private float _timer;
-    private float _timeBetweenFiring = 0.3f;
+    private readonly float _timeBetweenFiring = 0.3f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -50,7 +50,7 @@ public class Shooting : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButton(0) && canFire())
+        if (Input.GetMouseButton(0) && CanFire())
         {
             RoomManager manager = Object.FindFirstObjectByType<RoomManager>();
             if (manager != null && manager.currentRoomInstance != null)
@@ -66,8 +66,16 @@ public class Shooting : MonoBehaviour
     /**
      * Renvoie true si le joueur peut encore tirer des balles à partir de _bulletStock;
      */
-    private bool canFire()
+    private bool CanFire()
     {
         return _bulletLefts > 0 && !_hasShot;
+    }
+
+    /**
+     * Retourne true si bullets restantes
+     */
+    public bool HasBulletLefts()
+    {
+        return _bulletLefts > 0;
     }
 }
