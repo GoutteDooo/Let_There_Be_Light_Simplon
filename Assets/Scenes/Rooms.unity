@@ -1230,7 +1230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b63689d1bc2af4482ca351fa9f7cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletsLeft: 0
   bulletsInGun: {fileID: 522414446}
 --- !u!4 &959055142
 Transform:
