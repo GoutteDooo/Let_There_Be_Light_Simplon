@@ -685,6 +685,7 @@ MonoBehaviour:
   - {fileID: 3306760109556388130, guid: b9d81608e166f4b44818163de4fcb98f, type: 3}
   - {fileID: 3306760109556388130, guid: 8e94fac90072a924585126f1200e86a4, type: 3}
   currentRoomInstance: {fileID: 0}
+  levelCompleteMenu: {fileID: 690618356}
 --- !u!4 &472891879
 Transform:
   m_ObjectHideFlags: 0
