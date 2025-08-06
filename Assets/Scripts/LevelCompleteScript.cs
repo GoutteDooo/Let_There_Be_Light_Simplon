@@ -9,6 +9,21 @@ public class LevelCompleteScript : MonoBehaviour
     {
         room = GameObject.FindFirstObjectByType<RoomManager>();
     }
+    void OnEnable()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    void OnDisable()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+
+    void OnGameStateChanged(GameState newState)
+    {
+        if (newState == GameState.Won)
+            menu.SetActive(true);
+    }
 
     /**
      * Bouton Next

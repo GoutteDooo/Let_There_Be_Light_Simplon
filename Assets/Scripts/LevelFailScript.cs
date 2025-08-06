@@ -9,6 +9,21 @@ public class LevelFailScript : MonoBehaviour
     {
         room = GameObject.FindFirstObjectByType<RoomManager>();
     }
+    void OnEnable()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    void OnDisable()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+
+    void OnGameStateChanged(GameState newState)
+    {
+        if (newState == GameState.Lost)
+            menu.SetActive(true);
+    }
     public void RestartLevel()
     {
         menu.SetActive(false);
