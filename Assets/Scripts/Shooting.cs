@@ -14,49 +14,60 @@ public class Shooting : MonoBehaviour
     private Vector3 mousePos;
     public GameObject bullet; // bullet that will be instantiated
     public Transform bulletTransform; // gun
-    public bool canFire; // to know when player can fire
     private int _bulletLefts; // Stock restant de bullet
+    private bool _hasShot; // Pour définir un timing entre les tirs
     private float _timer;
-    public float timeBetweenFiring;
+    private float _timeBetweenFiring = 0.3f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        _hasShot = false;
         _mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        canFire = true;
         _bulletLefts = GameObject.FindFirstObjectByType<RoomData>().bulletStock;
-        Debug.Log("Nombre de bullets restantes : " +  _bulletLefts);
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Récupère la position du curseur sur l'écran
         mousePos = _mainCam.ScreenToWorldPoint(Input.mousePosition);
-
+        // Définit la position du bras
         Vector3 rotation = mousePos - transform.position;
-
+        // Définit la rotation du bras
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-
+        // Set la rotation
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
-        if (!canFire)
+        if (_hasShot)
         {
             _timer += Time.deltaTime;
-            if(_timer > timeBetweenFiring)
+            // une fois le timer écoulé, le joueur peut retirer une balle (s'il lui en reste)
+            if(_timer > _timeBetweenFiring)
             {
-                canFire = true;
                 _timer = 0;
+                _hasShot = false;
             }
-        } // TODO : Set canFire to true when there is no bullet left in the room
+        }
 
-        if (Input.GetMouseButton(0) && canFire)
+        if (Input.GetMouseButton(0) && canFire())
         {
             RoomManager manager = Object.FindFirstObjectByType<RoomManager>();
-            canFire = false;
             if (manager != null && manager.currentRoomInstance != null)
             {
                 Instantiate(bullet, bulletTransform.position, Quaternion.identity, manager.currentRoomInstance.transform);
+                _bulletLefts -= 1;
+                _hasShot = true; // Lance le timer plus haut
+                Debug.Log("balles restantes : " + _bulletLefts);
             }
         }
+    }
+
+    /**
+     * Renvoie true si le joueur peut encore tirer des balles à partir de _bulletStock;
+     */
+    private bool canFire()
+    {
+        return _bulletLefts > 0 && !_hasShot;
     }
 }
