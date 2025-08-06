@@ -84,8 +84,9 @@ public class RoomManager : MonoBehaviour
         else
         {
             levelCompleteMenu.SetActive(false);
-            SceneManager.LoadScene("StartScreen");
-            Debug.Log("Fin du jeu !");
+            SceneManager.LoadScene("EndScreen");
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("EndScreen"));
+            SceneManager.UnloadSceneAsync("Rooms");
         }
     }
 
