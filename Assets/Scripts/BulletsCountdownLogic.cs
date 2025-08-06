@@ -22,9 +22,7 @@ public class BulletsCountdownLogic : MonoBehaviour
 
     void OnGameStateChanged(GameState newState)
     {
-        if (newState != GameState.Playing)
-            gameObject.SetActive(false);
-        else
+        if (newState == GameState.Playing)
             gameObject.SetActive(true);
     }
 
