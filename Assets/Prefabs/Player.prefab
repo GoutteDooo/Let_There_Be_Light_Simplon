@@ -145,7 +145,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.042858124
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -385,5 +385,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3846698652435678137, guid: 6a2eb437900137547ab741f36bb8b8a4, type: 3}
   bulletTransform: {fileID: 724538619903462486}
-  canFire: 0
-  timeBetweenFiring: 0.5
