@@ -14,20 +14,24 @@ public class RoomManager : MonoBehaviour
 
     void Start()
     {
-        currentRoomIndex = 0;//DEV
+        currentRoomIndex = 2;//DEV
         LoadRoom(currentRoomIndex);//DEV
         //LoadRoom(0); // Début du jeu
     }
 
     void Update()
     {
+        // Léger timing pour interrompre l'update lors de la transition de room
         if (roomJustLoaded)
         {
-            
             failCheckTimer += Time.deltaTime;
             if (failCheckTimer >= 0.5f)
-            { 
+            {
                 roomJustLoaded = false;
+            }
+            else
+            {
+                return; // Mettre en pause la fonction Update entière
             }
         }
 
@@ -51,7 +55,7 @@ public class RoomManager : MonoBehaviour
             }
         }
         // Managing Restart level
-        if (NoBulletLefts() && !roomJustLoaded)
+        if (NoBulletLefts())
         {
             LevelFailScript failMenu = GameObject.FindFirstObjectByType<LevelFailScript>();
             bDisplay.SetActive(false);
