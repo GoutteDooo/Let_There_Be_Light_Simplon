@@ -61,16 +61,17 @@ public class RoomManager : MonoBehaviour
 
     void LoadRoom(int index)
     {
-        // D�truire la room actuelle
+        // Détruire la room actuelle
         if (currentRoomInstance != null)
             Destroy(currentRoomInstance);
 
-        // Cr�er la nouvelle room (ou la m�me, �a d�pend d'o� est appel�e la m�thode)
+        // Créer la nouvelle room (ou la même, ça dépend d'où est appelée la méthode)
         currentRoomInstance = Instantiate(roomPrefabs[index]);
 
         failCheckTimer = 0f;
         roomJustLoaded = true;
 
+        // Affichage UI des bullets
         BulletsCountdownLogic ui = GameObject.FindFirstObjectByType<BulletsCountdownLogic>();
         if (ui != null)
         {
@@ -79,9 +80,8 @@ public class RoomManager : MonoBehaviour
 
         bDisplay.SetActive(true);
 
-        // R�cup�re les targets dans cette room
+        // Récupère les targets dans cette room
         currentTargets = currentRoomInstance.GetComponentsInChildren<TargetScript>();
-        //Debug.Log($"Room {index} charg�e avec {currentTargets.Length} target(s).");
 
     }
 

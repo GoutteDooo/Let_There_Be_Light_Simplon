@@ -8,7 +8,6 @@ public class BulletsCountdownLogic : MonoBehaviour
 
     void Start()
     {
-
     }
 
     void Update()
