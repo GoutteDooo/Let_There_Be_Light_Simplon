@@ -34,7 +34,7 @@ public class PortalLogic : MonoBehaviour
 
                 // --- 4. Placement bullet + légère avancée
                 Vector2 exitDirection = linkedPortal.transform.right; // ou .up selon ton prefab
-                collision.transform.position = worldExitPosition + exitDirection * 0.5f;
+                collision.transform.position = worldExitPosition + exitDirection * 0.3f;
 
                 // --- 5. Anti-téléportation infinie
                 bullet.recentlyTeleported = true;
