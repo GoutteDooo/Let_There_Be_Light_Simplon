@@ -53,7 +53,6 @@ public class RoomManager : MonoBehaviour
             if (allTargetsActive)
             {
                 bDisplay.SetActive(false);
-                //levelCompleteMenu.SetActive(true);
                 GameStateManager.Instance.SetState(GameState.Won);
             }
         }
