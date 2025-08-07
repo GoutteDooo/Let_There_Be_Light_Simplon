@@ -152,160 +152,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Holy Light Aura_0
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 311
-        width: 51
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a8e02e2f7329e38c0800000000000000
-      internalID: -4017613048572146038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Holy Light Aura_1
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 311
-        width: 51
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8298cb353e46751c0800000000000000
-      internalID: -4515029173890414296
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Holy Light Aura_2
-      rect:
-        serializedVersion: 2
-        x: 215
-        y: 311
-        width: 51
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 505ca7ec7ae4cbef0800000000000000
-      internalID: -91111409823595259
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Holy Light Aura_3
-      rect:
-        serializedVersion: 2
-        x: 310
-        y: 311
-        width: 52
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5bf90d45054775f40800000000000000
-      internalID: 5717166140339298229
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Holy Light Aura_4
-      rect:
-        serializedVersion: 2
-        x: 407
-        y: 311
-        width: 51
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b8e303418e83a0b30800000000000000
-      internalID: 4254275367427128971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Holy Light Aura_5
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 215
-        width: 51
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f9195184fa785bec0800000000000000
-      internalID: -3551783544213368417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Holy Light Aura_6
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 215
-        width: 51
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44b553e20c0776c40800000000000000
-      internalID: 5505493040195001156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Holy Light Aura_7
       rect:
         serializedVersion: 2
@@ -314,7 +160,7 @@ TextureImporter:
         width: 49
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -336,7 +182,7 @@ TextureImporter:
         width: 49
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -358,7 +204,7 @@ TextureImporter:
         width: 49
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -380,7 +226,7 @@ TextureImporter:
         width: 50
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -402,7 +248,7 @@ TextureImporter:
         width: 49
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -424,7 +270,7 @@ TextureImporter:
         width: 49
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -446,7 +292,7 @@ TextureImporter:
         width: 49
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -463,7 +309,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7d93cfd8c7fd78942a3f10562cd217cd
     internalID: 0
     vertices: []
     indices: 
@@ -479,6 +325,7 @@ TextureImporter:
       Holy Light Aura_11: 927862479384655171
       Holy Light Aura_12: -5541492937502220788
       Holy Light Aura_13: 175133315009337965
+      Holy Light Aura_14: -2139139321
       Holy Light Aura_2: -91111409823595259
       Holy Light Aura_3: 5717166140339298229
       Holy Light Aura_4: 4254275367427128971

@@ -1,0 +1,454 @@
+fileFormatVersion: 2
+guid: e8db959e8647e984ea8ecdf3e4f71a3a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1171790437229086565
+    second: pngegg_0
+  - first:
+      213: -1169675433603995751
+    second: pngegg_1
+  - first:
+      213: -6196730701274677480
+    second: pngegg_2
+  - first:
+      213: 960099310682468794
+    second: pngegg_3
+  - first:
+      213: 7612028094638372450
+    second: pngegg_4
+  - first:
+      213: -3320128755632564503
+    second: pngegg_5
+  - first:
+      213: -3505401684911033210
+    second: pngegg_6
+  - first:
+      213: 7146570984753549674
+    second: pngegg_7
+  - first:
+      213: -7211625423188279565
+    second: pngegg_8
+  - first:
+      213: -5106862008032299496
+    second: pngegg_9
+  - first:
+      213: -496953528924953034
+    second: pngegg_10
+  - first:
+      213: -7009550200095231455
+    second: pngegg_11
+  - first:
+      213: 5875118585677412000
+    second: pngegg_12
+  - first:
+      213: -7616015095909938833
+    second: pngegg_13
+  - first:
+      213: 7576120263111014131
+    second: pngegg_14
+  - first:
+      213: -1555190450370771860
+    second: pngegg_15
+  - first:
+      213: -6501886829429134658
+    second: pngegg_16
+  - first:
+      213: 321054512355665328
+    second: pngegg_17
+  - first:
+      213: -4300076310961011675
+    second: pngegg_18
+  - first:
+      213: 8905121229971597864
+    second: pngegg_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pngegg_2
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 641
+        width: 177
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ff3c5424ac00aa0800000000000000
+      internalID: -6196730701274677480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngegg_3
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 647
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1735a7c35f25d00800000000000000
+      internalID: 960099310682468794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngegg_6
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 443
+        width: 161
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68472df6dbf4a5fc0800000000000000
+      internalID: -3505401684911033210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngegg_7
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 446
+        width: 155
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61595c4278bd2360800000000000000
+      internalID: 7146570984753549674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngegg_9
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 444
+        width: 159
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 816fb4e9f08c029b0800000000000000
+      internalID: -5106862008032299496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngegg_10
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 441
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6362d8ef5677a19f0800000000000000
+      internalID: -496953528924953034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngegg_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 233
+        width: 169
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a6f898d93d988150800000000000000
+      internalID: 5875118585677412000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngegg_13
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 231
+        width: 173
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6986442f9a7e4690800000000000000
+      internalID: -7616015095909938833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngegg_14
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 229
+        width: 177
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f6fe524d39c32960800000000000000
+      internalID: 7576120263111014131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngegg_15
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 223
+        width: 177
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64029f668ada6ae0800000000000000
+      internalID: -1555190450370771860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngegg_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 23
+        width: 177
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebae51a8068a4c5a0800000000000000
+      internalID: -6501886829429134658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 51ac283785600104bbabaeafbaca3e5f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      pngegg_0: -1171790437229086565
+      pngegg_1: -1169675433603995751
+      pngegg_10: -496953528924953034
+      pngegg_11: -7009550200095231455
+      pngegg_12: 5875118585677412000
+      pngegg_13: -7616015095909938833
+      pngegg_14: 7576120263111014131
+      pngegg_15: -1555190450370771860
+      pngegg_16: -6501886829429134658
+      pngegg_17: 321054512355665328
+      pngegg_18: -4300076310961011675
+      pngegg_19: 8905121229971597864
+      pngegg_2: -6196730701274677480
+      pngegg_3: 960099310682468794
+      pngegg_4: 7612028094638372450
+      pngegg_5: -3320128755632564503
+      pngegg_6: -3505401684911033210
+      pngegg_7: 7146570984753549674
+      pngegg_8: -7211625423188279565
+      pngegg_9: -5106862008032299496
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
