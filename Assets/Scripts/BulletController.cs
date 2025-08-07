@@ -6,7 +6,6 @@ public class BulletController : MonoBehaviour
     private Camera _mainCam;
     private Rigidbody2D _rb;
     public float force;
-    public float speed = 7.5f;
     Vector2 lastVelocity;
     public bool recentlyTeleported = false;
     private float _timer;

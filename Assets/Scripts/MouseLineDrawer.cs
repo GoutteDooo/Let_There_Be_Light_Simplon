@@ -46,7 +46,7 @@ public class MouseLineDrawer : MonoBehaviour
             // Si aucun mur touché, ligne jusqu'à une certaine distance
             lineRenderer.positionCount = 2;
             lineRenderer.SetPosition(0, origin);
-            lineRenderer.SetPosition(1, origin + direction * 10f); // distance arbitraire
+            lineRenderer.SetPosition(1, origin + direction * 20f); // distance arbitraire
         }
     }
 }
