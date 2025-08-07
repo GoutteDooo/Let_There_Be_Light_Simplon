@@ -688,7 +688,7 @@ MonoBehaviour:
   - {fileID: 3306760109556388130, guid: 94f4eed37934d5f44bacf2d3bb93e1d0, type: 3}
   - {fileID: 3306760109556388130, guid: 91535a5e46d68d746847d197da83dab8, type: 3}
   - {fileID: 3306760109556388130, guid: dd402e3a797f63041b9e638101517e08, type: 3}
-  - {fileID: 3306760109556388130, guid: 91535a5e46d68d746847d197da83dab8, type: 3}
+  - {fileID: 3306760109556388130, guid: 9437f9df89e286f4dadf8565e80c8d37, type: 3}
   currentRoomInstance: {fileID: 0}
   levelCompleteMenu: {fileID: 690618356}
   bDisplay: {fileID: 656190979}
@@ -804,7 +804,6 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
   m_IsActive: 1
 --- !u!224 &656190980
 RectTransform:
