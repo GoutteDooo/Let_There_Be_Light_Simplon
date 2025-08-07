@@ -120,16 +120,16 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 191
-        width: 49
-        height: 33
+        y: 192
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: b87335042b1110f60800000000000000
       internalID: 7998693870467757963
@@ -141,20 +141,118 @@ TextureImporter:
       name: Props-01_1
       rect:
         serializedVersion: 2
+        x: 16
+        y: 58
+        width: 64
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5507bbba7ac3c8b0800000000000000
+      internalID: -5133036521788078757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props-01_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 48
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac79a59ee17ecf24f84b7c41d5bb712d
+      internalID: 1560508442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props-01_3
+      rect:
+        serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 219
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 74, z: 48, w: 0}
+      customData: 
+      outline:
+      - - {x: -16, y: -32}
+        - {x: -18, y: -32}
+        - {x: -18, y: 33}
+        - {x: 32, y: 33}
+        - {x: 32, y: 40}
+        - {x: -24, y: 40}
+        - {x: -32, y: 35}
+        - {x: -32, y: 3}
+        - {x: -32, y: -40}
+        - {x: -16, y: -40}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e24d68a41850a40b5e7234e40a79bf
+      internalID: -470164327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props-01_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b5563648331e74fae370f8ffb3b6b6
+      internalID: 1719479658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Props-01_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 32
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b5507bbba7ac3c8b0800000000000000
-      internalID: -5133036521788078757
+      spriteID: c0c843df40670444b87d9b681953506d
+      internalID: 510871174
       vertices: []
       indices: 
       edges: []
@@ -163,7 +261,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: dec1bc820715b8841a7ae242cd2b6bee
     internalID: 0
     vertices: []
     indices: 
@@ -171,10 +269,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":224.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Props-01_0: 7998693870467757963
       Props-01_1: -5133036521788078757
+      Props-01_2: 1560508442
+      Props-01_3: -470164327
+      Props-01_4: 1719479658
+      Props-01_5: 510871174
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
