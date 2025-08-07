@@ -49,12 +49,13 @@ public class PortalLogic : MonoBehaviour
                 bullet.recentlyTeleported = true;
                 linkedPortal.GetComponent<MonoBehaviour>().StartCoroutine(ResetTeleportFlag(bullet));
             }
+
         }
     }
 
     private System.Collections.IEnumerator ResetTeleportFlag(BulletController bullet)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         bullet.recentlyTeleported = false;
     }
 }

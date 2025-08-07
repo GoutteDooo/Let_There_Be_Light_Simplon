@@ -23,8 +23,8 @@ public class BulletController : MonoBehaviour
         _rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * force;
 
         // TODO : Récupérer le temps de feu à partir du niveau actuel
-        // Actuellement, on va set à 7s
-        livingTime = 7f;
+        // Actuellement, on va set à 15s
+        livingTime = 15f;
     }
 
     // Update is called once per frame
