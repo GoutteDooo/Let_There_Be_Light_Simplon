@@ -9,7 +9,7 @@ public class PortalLogic : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 3 && linkedPortal != null)
+        if (collision.gameObject.CompareTag("Bullet") && linkedPortal != null)
         {
             BulletController bullet = collision.gameObject.GetComponent<BulletController>();
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();

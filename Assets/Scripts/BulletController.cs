@@ -46,13 +46,18 @@ public class BulletController : MonoBehaviour
         {
             GameStateManager.Instance.SetState(GameState.Lost);
         }
+
         //Debug.Log("La balle a touché : " + collision.gameObject.name);
-        var speed = lastVelocity.magnitude;
-        var direction = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
-        _rb.linearVelocity = direction * Mathf.Max(speed, 0f);
+        // Si elle touche un obstacle, elle rebondit
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            var speed = lastVelocity.magnitude;
+            var direction = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
+            _rb.linearVelocity = direction * Mathf.Max(speed, 0f);
+        }
 
-        // Si elle touche une target ou le joueur, ou si elle dépasse un certain temps, on la détruit
+        // Si elle touche une Target ou le joueur, on la détruit
         if (collision.gameObject.layer == 6 || collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
