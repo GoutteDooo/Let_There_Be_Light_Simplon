@@ -41,7 +41,7 @@ public class BulletController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Si balle touche joueur, relancer la partie
+        // Si balle touche joueur, partie perdue
         if (collision.gameObject.CompareTag("Player"))
         {
             GameStateManager.Instance.SetState(GameState.Lost);
