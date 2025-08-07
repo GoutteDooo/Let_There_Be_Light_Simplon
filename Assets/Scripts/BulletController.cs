@@ -6,7 +6,7 @@ public class BulletController : MonoBehaviour
     private Camera _mainCam;
     private Rigidbody2D _rb;
     public float force;
-    public float speed = 5f;
+    public float speed = 7.5f;
     Vector2 lastVelocity;
     public bool recentlyTeleported = false;
     private float _timer;
@@ -45,8 +45,7 @@ public class BulletController : MonoBehaviour
         // Si balle touche joueur, relancer la partie
         if (collision.gameObject.CompareTag("Player"))
         {
-            LevelFailScript failMenu = GameObject.FindFirstObjectByType<LevelFailScript>();
-            failMenu.menu.SetActive(true);
+            GameStateManager.Instance.SetState(GameState.Lost);
         }
         //Debug.Log("La balle a touché : " + collision.gameObject.name);
         var speed = lastVelocity.magnitude;

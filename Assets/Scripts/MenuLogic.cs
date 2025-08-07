@@ -7,15 +7,14 @@ public class MenuLogic : MonoBehaviour
 
     void Start()
     {
-        menu.SetActive(true);
+        GameStateManager.Instance.SetState(GameState.Paused);
     }
 
     public void StartGame()
     {
         menu.SetActive(false);
-        Debug.Log("Game Started");
+
+        // Remplace la scene StartScreen par la scene Rooms
         SceneManager.LoadScene("Rooms");
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("Rooms"));
-        SceneManager.UnloadSceneAsync("StartScreen");
     }
 }

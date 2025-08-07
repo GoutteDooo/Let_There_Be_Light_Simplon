@@ -19,16 +19,16 @@ public class PortalLogic : MonoBehaviour
                 collision.transform.position = linkedPortal.transform.position;
 
                 // Rotate velocity based on linked portal's Z rotation
-                Vector2 currentVelocity = rb.linearVelocity;
-                float angle = linkedPortal.transform.eulerAngles.z;
-                float angleRad = angle * Mathf.Deg2Rad;
+                //Vector2 currentVelocity = rb.linearVelocity;
+                //float angle = linkedPortal.transform.eulerAngles.z;
+                //float angleRad = angle * Mathf.Deg2Rad;
 
-                Vector2 newVelocity = new Vector2(
-                    currentVelocity.x * Mathf.Cos(angleRad) - currentVelocity.y * Mathf.Sin(angleRad),
-                    currentVelocity.x * Mathf.Sin(angleRad) + currentVelocity.y * Mathf.Cos(angleRad)
-                );
+                //Vector2 newVelocity = new Vector2(
+                //    currentVelocity.x * Mathf.Cos(angleRad) - currentVelocity.y * Mathf.Sin(angleRad),
+                //    currentVelocity.x * Mathf.Sin(angleRad) + currentVelocity.y * Mathf.Cos(angleRad)
+                //);
 
-                rb.linearVelocity = newVelocity;
+                //rb.linearVelocity = newVelocity;
 
                 // Set teleport flag
                 bullet.recentlyTeleported = true;
