@@ -18,6 +18,21 @@ public class Shooting : MonoBehaviour
     private bool _hasShot; // Pour définir un timing entre les tirs
     private float _timer;
     private readonly float _timeBetweenFiring = 0.3f;
+    void OnEnable()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    void OnDisable()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+
+    void OnGameStateChanged(GameState newState)
+    {
+        // Si l'état du jeu n'est pas sur "Play", on désactive le drawer
+        gameObject.SetActive(newState == GameState.Playing);
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -57,6 +72,7 @@ public class Shooting : MonoBehaviour
             {
                 Instantiate(bullet, bulletTransform.position, Quaternion.identity, manager.currentRoomInstance.transform);
                 bulletLefts -= 1;
+                Debug.Log("BCL : " + FindFirstObjectByType<BulletsCountdownLogic>());
                 FindFirstObjectByType<BulletsCountdownLogic>().DisplayBullets();
                 _hasShot = true; // Lance le timer plus haut
                 Debug.Log("balles restantes : " + bulletLefts);
@@ -65,13 +81,12 @@ public class Shooting : MonoBehaviour
     }
 
     /**
-     * Renvoie true si le joueur peut encore tirer des balles à partir de _bulletStock;
+     * Renvoie true si le joueur peut encore tirer des balles
      */
     private bool CanFire()
     {
         return bulletLefts > 0 && !_hasShot;
     }
-
     /**
      * Retourne true si bullets restantes
      */

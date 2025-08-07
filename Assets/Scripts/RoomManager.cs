@@ -14,20 +14,26 @@ public class RoomManager : MonoBehaviour
 
     void Start()
     {
-        currentRoomIndex = 0;//DEV
-        LoadRoom(0);//DEV
-        //LoadRoom(0); // Début du jeu 
+        currentRoomIndex = 5;//DEV
+        LoadRoom(currentRoomIndex);//DEV
+        //LoadRoom(0); // Début du jeu
     }
 
     void Update()
     {
+        if (GameStateManager.Instance.CurrentState != GameState.Playing)
+            return;
+        // Léger timing pour interrompre l'update lors de la transition de room
         if (roomJustLoaded)
         {
-            
             failCheckTimer += Time.deltaTime;
             if (failCheckTimer >= 0.5f)
-            { 
+            {
                 roomJustLoaded = false;
+            }
+            else
+            {
+                return; // Mettre en pause la fonction Update entière
             }
         }
 
@@ -47,15 +53,18 @@ public class RoomManager : MonoBehaviour
             if (allTargetsActive)
             {
                 bDisplay.SetActive(false);
-                levelCompleteMenu.SetActive(true);
+                GameStateManager.Instance.SetState(GameState.Won);
             }
         }
         // Managing Restart level
-        if (NoBulletLefts() && !roomJustLoaded)
+        if (NoBulletLefts())
         {
-            LevelFailScript failMenu = GameObject.FindFirstObjectByType<LevelFailScript>();
+            //LevelFailScript failMenu = GameObject.FindFirstObjectByType<LevelFailScript>();
+            //failMenu.menu.SetActive(true);
+
+            /* On change l'état à Lost et failMenu s'affichera de lui-même */
             bDisplay.SetActive(false);
-            failMenu.menu.SetActive(true);
+            GameStateManager.Instance.SetState(GameState.Lost);
         }
     }
 
@@ -71,6 +80,7 @@ public class RoomManager : MonoBehaviour
         failCheckTimer = 0f;
         roomJustLoaded = true;
 
+        // Affichage UI des bullets
         BulletsCountdownLogic ui = GameObject.FindFirstObjectByType<BulletsCountdownLogic>();
         if (ui != null)
         {
@@ -81,14 +91,15 @@ public class RoomManager : MonoBehaviour
 
         // Récupère les targets dans cette room
         currentTargets = currentRoomInstance.GetComponentsInChildren<TargetScript>();
-        //Debug.Log($"Room {index} chargée avec {currentTargets.Length} target(s).");
 
+        // Et on joue
+        if (roomJustLoaded) // On attend que la transition se fasse avant
+            GameStateManager.Instance.SetState(GameState.Playing);
     }
 
     public void LoadNextRoom()
     {
         currentRoomIndex++;
-
         if (currentRoomIndex < roomPrefabs.Length)
         {
             LoadRoom(currentRoomIndex);
@@ -106,21 +117,23 @@ public class RoomManager : MonoBehaviour
     public void RestartLevel()
     {
         LoadRoom(currentRoomIndex);
-        Debug.Log($"Room {currentRoomIndex} redémarrée.");
+        //Debug.Log($"Room {currentRoomIndex} red�marr�e.");
     }
 
     /**
-     * Retourne true s'il n'y a plus de stock de bullets ni d'instance de Bullet dans la room (et qu'il y'a au moins une target inactive)
+     * Retourne true s'il n'y a plus de stock de bullets ni d'instance de Bullet dans la room
      */
     private bool NoBulletLefts()
     {
-        // Récupérer l'instance de Shooting de la room
+        // R�cup�rer l'instance de Shooting de la room
         Shooting shooter = Object.FindFirstObjectByType<Shooting>();
-        //Debug.Log("RoomManager, Bulletlefts: " + test.HasBulletLefts());
-        // Vérifier que le nombre de Bullets dans la room est de 0
+        if (shooter == null)
+            return false;
+
+        // V�rifier que le nombre de Bullets dans la room est de 0
         bool isBulletsInRoom = Object.FindFirstObjectByType<BulletController>();
-        //Debug.Log(isBulletsInRoom ? "Y'en a" : "Plus de Bullets");
-        // Vérifier si au moins une target est inactive
+
+        // V�rifier si au moins une target est inactive
         bool allTargetsActive = true;
         foreach(var target in currentTargets)
         {
@@ -130,6 +143,7 @@ public class RoomManager : MonoBehaviour
                 break;
             }
         }
+
         return !shooter.HasBulletLefts() && !isBulletsInRoom && !allTargetsActive;
     }
 }

@@ -9,7 +9,7 @@ public class TargetScript : MonoBehaviour
     void Start()
     {
         Color color;
-        if (ColorUtility.TryParseHtmlString("#D4C477", out color)) // remplace par ton code hex
+        if (ColorUtility.TryParseHtmlString("#D4C477", out color))
         {
             sprite.color = color;
         }
@@ -17,12 +17,6 @@ public class TargetScript : MonoBehaviour
         {
             Debug.LogWarning("Code couleur invalide !");
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
