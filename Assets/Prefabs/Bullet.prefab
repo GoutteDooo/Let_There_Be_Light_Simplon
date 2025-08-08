@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 3294488337307844044}
   m_Layer: 3
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,7 +193,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -254,8 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3a08072ae649cd408e71297b5d2b7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 5
-  speed: 5
+  force: 7
   recentlyTeleported: 0
   livingTime: 0
 --- !u!1 &6625634265751098901

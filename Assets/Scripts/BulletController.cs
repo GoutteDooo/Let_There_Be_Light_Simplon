@@ -6,7 +6,6 @@ public class BulletController : MonoBehaviour
     private Camera _mainCam;
     private Rigidbody2D _rb;
     public float force;
-    public float speed = 7.5f;
     Vector2 lastVelocity;
     public bool recentlyTeleported = false;
     private float _timer;
@@ -24,8 +23,8 @@ public class BulletController : MonoBehaviour
         _rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * force;
 
         // TODO : Récupérer le temps de feu à partir du niveau actuel
-        // Actuellement, on va set à 7s
-        livingTime = 7f;
+        // Actuellement, on va set à 15s
+        livingTime = 15f;
     }
 
     // Update is called once per frame
@@ -42,18 +41,15 @@ public class BulletController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Si balle touche joueur, relancer la partie
+        // Si balle touche joueur, partie perdue
         if (collision.gameObject.CompareTag("Player"))
         {
             GameStateManager.Instance.SetState(GameState.Lost);
         }
+
         //Debug.Log("La balle a touché : " + collision.gameObject.name);
-        var speed = lastVelocity.magnitude;
-        var direction = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
-        _rb.linearVelocity = direction * Mathf.Max(speed, 0f);
-
-        // Si elle touche une target ou le joueur, ou si elle dépasse un certain temps, on la détruit
+        // Si elle touche une Target ou le joueur, on la détruit
         if (collision.gameObject.layer == 6 || collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);

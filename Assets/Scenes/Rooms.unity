@@ -687,8 +687,10 @@ MonoBehaviour:
   - {fileID: 3306760109556388130, guid: 91fd0809230f74d4199acc2e23e8073a, type: 3}
   - {fileID: 3306760109556388130, guid: 94f4eed37934d5f44bacf2d3bb93e1d0, type: 3}
   - {fileID: 3306760109556388130, guid: 91535a5e46d68d746847d197da83dab8, type: 3}
-  - {fileID: 3306760109556388130, guid: 91535a5e46d68d746847d197da83dab8, type: 3}
-  - {fileID: 3306760109556388130, guid: 91535a5e46d68d746847d197da83dab8, type: 3}
+  - {fileID: 3306760109556388130, guid: dd402e3a797f63041b9e638101517e08, type: 3}
+  - {fileID: 3306760109556388130, guid: 800f586a1fdf80b4f81257aeced7364b, type: 3}
+  - {fileID: 3306760109556388130, guid: 9437f9df89e286f4dadf8565e80c8d37, type: 3}
+  - {fileID: 3306760109556388130, guid: 0e98eaa47b569b54297e425931c644e5, type: 3}
   currentRoomInstance: {fileID: 0}
   levelCompleteMenu: {fileID: 690618356}
   bDisplay: {fileID: 656190979}
@@ -783,8 +785,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -749, y: 352}
-  m_SizeDelta: {x: 300, y: 270}
+  m_AnchoredPosition: {x: -846.38544, y: 430.14648}
+  m_SizeDelta: {x: 234.2893, y: 210.8571}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &656190979
 GameObject:
@@ -804,7 +806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &656190980
 RectTransform:
   m_ObjectHideFlags: 0
@@ -854,10 +856,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885487064099215792}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 10.15, y: -0.66, z: 0}
+  m_LocalRotation: {x: 0.0000003745059, y: -4.9027436e-12, z: -0.000000566244, w: 1}
+  m_LocalPosition: {x: 0.48, y: -0.041, z: 0}
   m_LocalScale: {x: 5, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkedPortal: {fileID: 4153366594397513248}
+  invertExitOffset: 0
 --- !u!70 &8423502660057896617
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -376,6 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkedPortal: {fileID: 885487064099215792}
+  invertExitOffset: 0
 --- !u!70 &5612032694725084429
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -511,7 +513,7 @@ GameObject:
   - component: {fileID: 5143417382675813961}
   m_Layer: 0
   m_Name: Portals
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
