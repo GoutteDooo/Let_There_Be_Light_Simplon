@@ -1,61 +1,97 @@
+using System.Collections;
 using UnityEngine;
 
-public class PortalLogic : MonoBehaviour
+[RequireComponent(typeof(Collider2D))]
+public class PortalLogic2D : MonoBehaviour
 {
-    public GameObject linkedPortal;
+    [Header("Lien & options")]
+    public PortalLogic2D linkedPortal;
+    [Tooltip("Symï¿½trie locale sur l'axe X du portail (miroir horizontal).")]
+    public bool invertLocalX = false;
+    [Tooltip("Symï¿½trie locale sur l'axe Y du portail (miroir vertical).")]
+    public bool invertLocalY = false;
 
-    [Tooltip("Si activé, la bullet ressortira en position inversée (symétrie verticale) par rapport à son entrée.")]
-    public bool invertExitOffset = false;
+    [Header("Sortie")]
+    [Tooltip("Dï¿½calage pour ï¿½jecter la balle en sortie (dans l'axe choisi).")]
+    public float exitPush = 0.3f;
+    public ExitAxis forwardAxis = ExitAxis.Right; // Right ou Up selon ton prefab
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    [Header("Sï¿½curitï¿½")]
+    [Tooltip("Durï¿½e pendant laquelle on ignore les collisions avec les 2 portails aprï¿½s TP.")]
+    public float ignoreTime = 0.1f;
+
+    private Collider2D portalCol;
+
+    public enum ExitAxis { Right, Up }
+
+    private void Awake()
     {
-        if (collision.gameObject.CompareTag("Bullet") && linkedPortal != null)
-        {
-            BulletController bullet = collision.gameObject.GetComponent<BulletController>();
-            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-
-            if (bullet != null && rb != null && !bullet.recentlyTeleported)
-            {
-                // --- 1. Rotation de la vélocité
-                float inAngle = transform.eulerAngles.z;
-                float outAngle = linkedPortal.transform.eulerAngles.z;
-                float deltaAngle = outAngle - inAngle;
-                float angleRad = deltaAngle * Mathf.Deg2Rad;
-
-                Vector2 currentVelocity = rb.linearVelocity;
-                Vector2 newVelocity = new Vector2(
-                    currentVelocity.x * Mathf.Cos(angleRad) - currentVelocity.y * Mathf.Sin(angleRad),
-                    currentVelocity.x * Mathf.Sin(angleRad) + currentVelocity.y * Mathf.Cos(angleRad)
-                );
-                rb.linearVelocity = newVelocity;
-
-                // --- 2. Position relative dans le portail d’entrée
-                Vector2 localOffset = transform.InverseTransformPoint(collision.transform.position);
-
-                // --- 3. Si besoin, inverser la position locale verticalement
-                if (invertExitOffset)
-                {
-                    localOffset.x = -localOffset.x;
-                }
-
-                // --- 4. Convertir cette position locale dans le portail de sortie
-                Vector2 worldExitPosition = linkedPortal.transform.TransformPoint(localOffset);
-
-                // --- 5. Placement final légèrement en avant du portail
-                Vector2 exitDirection = linkedPortal.transform.right; // ou .up selon le prefab
-                collision.transform.position = worldExitPosition + exitDirection * 0.3f;
-
-                // --- 6. Empêche téléportation immédiate
-                bullet.recentlyTeleported = true;
-                linkedPortal.GetComponent<MonoBehaviour>().StartCoroutine(ResetTeleportFlag(bullet));
-            }
-
-        }
+        portalCol = GetComponent<Collider2D>();
+        if (linkedPortal == null)
+            Debug.LogWarning($"[{name}] linkedPortal n'est pas assignï¿½.");
     }
 
-    private System.Collections.IEnumerator ResetTeleportFlag(BulletController bullet)
+    // Supporte les deux modes :
+    private void OnCollisionEnter2D(Collision2D collision) => TryTeleport(collision.collider, collision);
+    private void OnTriggerEnter2D(Collider2D other) => TryTeleport(other, null);
+
+    private void TryTeleport(Collider2D other, Collision2D collision)
     {
-        yield return new WaitForSeconds(0.1f);
-        bullet.recentlyTeleported = false;
+        if (!other || !other.CompareTag("Bullet") || linkedPortal == null) return;
+
+        var rb = other.attachedRigidbody;
+        var bullet = other.GetComponent<BulletController>();
+        if (rb == null || bullet == null || bullet.recentlyTeleported) return;
+
+        // 1) Point de contact (plus prï¿½cis que le center)
+        Vector2 contactWorld = other.transform.position;
+        if (collision != null && collision.contactCount > 0)
+            contactWorld = collision.GetContact(0).point; // premier point de contact (Unity API)
+
+        // 2) Position & vitesse en local du portail d'entrï¿½e
+        Vector2 localPos = transform.InverseTransformPoint(contactWorld);           // position locale
+        Vector2 localVel = transform.InverseTransformDirection(rb.linearVelocity);       // direction locale
+
+        // 3) Miroirs ï¿½ventuels
+        if (invertLocalX) { localPos.x = -localPos.x; localVel.x = -localVel.x; }
+        if (invertLocalY) { localPos.y = -localPos.y; localVel.y = -localVel.y; }
+
+        // 4) Reprojection dans l'espace du portail de sortie
+        Vector2 exitWorldPos = linkedPortal.transform.TransformPoint(localPos);
+        Vector2 exitWorldVel = linkedPortal.transform.TransformDirection(localVel);
+
+        // 5) Appliquer la tï¿½lï¿½portation proprement cï¿½tï¿½ physique
+        Vector2 forward = (linkedPortal.forwardAxis == ExitAxis.Right)
+            ? (Vector2)linkedPortal.transform.right
+            : (Vector2)linkedPortal.transform.up;
+
+        rb.position = exitWorldPos + forward * exitPush;  // tï¿½lï¿½portation nette (physique 2D)
+        rb.linearVelocity = exitWorldVel;                       // conserve lï¿½ï¿½nergie/direction adaptï¿½e
+
+        // 6) Empï¿½cher la re-tï¿½lï¿½portation immï¿½diate
+        bullet.recentlyTeleported = true;
+        StartCoroutine(ResetTeleportFlag(bullet, ignoreTime));
+
+        // Ignorer collisions avec les 2 portails pendant un bref instant
+        var otherCol = other;                    // collider de la balle
+        var exitCol = linkedPortal.portalCol;   // collider du portail de sortie
+        StartCoroutine(TemporarilyIgnore(otherCol, portalCol, exitCol, ignoreTime));
+    }
+
+    private IEnumerator TemporarilyIgnore(Collider2D bulletCol, Collider2D entryCol, Collider2D exitCol, float time)
+    {
+        if (bulletCol != null && entryCol != null) Physics2D.IgnoreCollision(bulletCol, entryCol, true);
+        if (bulletCol != null && exitCol != null) Physics2D.IgnoreCollision(bulletCol, exitCol, true);
+
+        yield return new WaitForSeconds(time);
+
+        if (bulletCol != null && entryCol != null) Physics2D.IgnoreCollision(bulletCol, entryCol, false);
+        if (bulletCol != null && exitCol != null) Physics2D.IgnoreCollision(bulletCol, exitCol, false);
+    }
+
+    private IEnumerator ResetTeleportFlag(BulletController bullet, float time)
+    {
+        yield return new WaitForSeconds(time);
+        if (bullet) bullet.recentlyTeleported = false;
     }
 }
