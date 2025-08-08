@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9205292289891276199}
   - component: {fileID: 2568493256848005676}
   - component: {fileID: 8426135590107392647}
+  - component: {fileID: 1726674466372537612}
   m_Layer: 0
   m_Name: Perimetre
   m_TagString: Untagged
@@ -100,6 +101,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec182c5909079a428b1b102d66edfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletMask:
+    serializedVersion: 2
+    m_Bits: 8
+  gravityStrength: 20
+  falloff: 2
+  minRadius: 0.2
+--- !u!58 &1726674466372537612
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186965743015532626}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1 &6458766053815584662
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,6 +153,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1223931721509585959}
   - component: {fileID: 5309734850778755618}
+  - component: {fileID: 729988272369454671}
+  - component: {fileID: 580065791769458392}
   m_Layer: 0
   m_Name: Gravitron
   m_TagString: Untagged
@@ -126,7 +171,7 @@ Transform:
   m_GameObject: {fileID: 6458766053815584662}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.008, y: 0, z: 0}
   m_LocalScale: {x: 0.5005, y: 0.5005, z: 0.5005}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -188,3 +233,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &729988272369454671
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6458766053815584662}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.49999997
+--- !u!114 &580065791769458392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6458766053815584662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ca771ee9ef0de4a879aa92247fdf3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletMask:
+    serializedVersion: 2
+    m_Bits: 8
+  destroyDelay: 0.5
