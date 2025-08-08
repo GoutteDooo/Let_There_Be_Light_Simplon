@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 7094741996313195337}
   - component: {fileID: 8409328237412472519}
   m_Layer: 0
-  m_Name: Biker_idle_0
+  m_Name: PlayerModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,7 +238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2344718153956891196}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.017, y: -0.066, z: 0}
   m_LocalScale: {x: 5.699271, y: 5.699271, z: 5.699271}
   m_ConstrainProportionsScale: 0
@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 5419060782125447322}
   - component: {fileID: 7483885943214070909}
   - component: {fileID: 1604047898994571439}
+  - component: {fileID: 4453133072303378911}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -402,7 +403,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 0.007843138, b: 0, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -449,6 +450,20 @@ CapsuleCollider2D:
   m_Offset: {x: -0.021980474, y: -0.18537135}
   m_Size: {x: 0.95097023, y: 1.4150091}
   m_Direction: 0
+--- !u!114 &4453133072303378911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3505548357459726746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b74e81369f0ab244bd2c3b5d014ead4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arm: {fileID: 1757660649081277344}
+  modelRoot: {fileID: 6950019682450147148}
 --- !u!1 &4816847167985063491
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,7 +475,7 @@ GameObject:
   - component: {fileID: 8723687130934392924}
   - component: {fileID: 4550677184721220576}
   m_Layer: 0
-  m_Name: Biker_attack2_7
+  m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
