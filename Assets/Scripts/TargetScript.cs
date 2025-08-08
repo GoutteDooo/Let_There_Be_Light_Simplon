@@ -1,29 +1,26 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class TargetScript : MonoBehaviour
 {
     public bool isTargetActive = false;
-    public SpriteRenderer sprite;
+    public GameObject Inactive;
+    public GameObject Active;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Color color;
-        if (ColorUtility.TryParseHtmlString("#D4C477", out color))
-        {
-            sprite.color = color;
-        }
-        else
-        {
-            Debug.LogWarning("Code couleur invalide !");
-        }
+        Inactive.SetActive(true);
+        Active.SetActive(false);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 3 && !isTargetActive)
         {
             isTargetActive = true;
-            sprite.color = Color.yellow;
+            Inactive.SetActive(false);
+            Active.SetActive(true);
             Debug.Log("Target is active");
         }
     }
