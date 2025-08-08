@@ -10,7 +10,21 @@ public class BulletController : MonoBehaviour
     public bool recentlyTeleported = false;
     private float _timer;
     public float livingTime;
+    void OnEnable()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
 
+    void OnDisable()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+
+    void OnGameStateChanged(GameState newState)
+    {
+        // Si l'état du jeu n'est pas sur "Play", on désactive le drawer
+        gameObject.SetActive(newState == GameState.Playing);
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
