@@ -10,7 +10,21 @@ public class BulletController : MonoBehaviour
     public bool recentlyTeleported = false;
     private float _timer;
     public float livingTime;
+    void OnEnable()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
 
+    void OnDisable()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+
+    void OnGameStateChanged(GameState newState)
+    {
+        // Si l'état du jeu n'est pas sur "Play", on désactive le drawer
+        gameObject.SetActive(newState == GameState.Playing);
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -50,7 +64,7 @@ public class BulletController : MonoBehaviour
         //Debug.Log("La balle a touché : " + collision.gameObject.name);
 
         // Si elle touche une Target ou le joueur, on la détruit
-        if (collision.gameObject.layer == 6 || collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.layer == 6 && !collision.gameObject.GetComponent<TargetScript>().isTargetActive || collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }
