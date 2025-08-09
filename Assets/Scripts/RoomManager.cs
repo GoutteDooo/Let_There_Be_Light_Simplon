@@ -37,6 +37,12 @@ public class RoomManager : MonoBehaviour
             RestartLevel();
         }
 
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            currentRoomIndex--;
+            RestartLevel();
+        }
+
         // Léger timing pour interrompre l'update lors de la transition de room
         if (roomJustLoaded)
         {
