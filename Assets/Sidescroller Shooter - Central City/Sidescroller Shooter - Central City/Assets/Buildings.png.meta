@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -120,9 +120,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 161
+        y: 160
         width: 96
-        height: 79
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,7 +209,7 @@ TextureImporter:
         serializedVersion: 2
         x: 224
         y: 80
-        width: 15
+        width: 16
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -231,7 +231,7 @@ TextureImporter:
         serializedVersion: 2
         x: 224
         y: 94
-        width: 15
+        width: 16
         height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -252,9 +252,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 272
-        y: 145
+        y: 144
         width: 33
-        height: 47
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,9 +273,9 @@ TextureImporter:
       name: Buildings_7
       rect:
         serializedVersion: 2
-        x: 193
+        x: 192
         y: 145
-        width: 31
+        width: 32
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -296,9 +296,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 112
-        y: 145
+        y: 144
         width: 32
-        height: 95
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,9 +340,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 238
-        y: 161
+        y: 163
         width: 20
-        height: 14
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,8 +363,8 @@ TextureImporter:
         serializedVersion: 2
         x: 304
         y: 48
-        width: 47
-        height: 73
+        width: 48
+        height: 72
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,9 +383,9 @@ TextureImporter:
       name: Buildings_12
       rect:
         serializedVersion: 2
-        x: 181
+        x: 182
         y: 197
-        width: 21
+        width: 20
         height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -406,9 +406,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 207
+        y: 208
         width: 16
-        height: 33
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,9 +428,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 33
-        y: 79
-        width: 47
-        height: 22
+        y: 80
+        width: 46
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,9 +450,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 272
-        y: 145
+        y: 144
         width: 64
-        height: 47
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,9 +471,9 @@ TextureImporter:
       name: Buildings_16
       rect:
         serializedVersion: 2
-        x: 208
+        x: 207
         y: 64
-        width: 16
+        width: 17
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -493,10 +493,10 @@ TextureImporter:
       name: Buildings_17
       rect:
         serializedVersion: 2
-        x: 128
-        y: 48
-        width: 64
-        height: 64
+        x: 180
+        y: 96
+        width: 27
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -516,9 +516,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 193
-        y: 177
+        y: 176
         width: 23
-        height: 15
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,9 +538,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 216
-        y: 177
+        y: 176
         width: 24
-        height: 15
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -560,11 +560,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 207
-        y: 177
+        y: 176
         width: 18
-        height: 15
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -573,6 +573,50 @@ TextureImporter:
       bones: []
       spriteID: 30dfd32634179b647a4adba60a144554
       internalID: -1177750089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_21
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 64
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be1bb0620e7dde448f8f5739c4d9e35
+      internalID: 1226627617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_22
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 64
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a2f8feb7297604da5433e69c42dc68
+      internalID: -1902329184
       vertices: []
       indices: 
       edges: []
@@ -607,6 +651,8 @@ TextureImporter:
       Buildings_19: 1729381538
       Buildings_2: -1541998101
       Buildings_20: -1177750089
+      Buildings_21: 1226627617
+      Buildings_22: -1902329184
       Buildings_3: -1842636890
       Buildings_4: 1933290517
       Buildings_5: -1020463279
