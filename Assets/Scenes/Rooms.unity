@@ -694,6 +694,7 @@ MonoBehaviour:
   - {fileID: 3306760109556388130, guid: a6b1a9cb90cbedc4485874e3683c0162, type: 3}
   - {fileID: 3306760109556388130, guid: 9b69dd9aa70e8cd4dbc4e18d71043674, type: 3}
   - {fileID: 3306760109556388130, guid: 0b95ee2ff72a023459f3e12854964f5d, type: 3}
+  - {fileID: 3306760109556388130, guid: bb2faef26ffe346479fd8ff72eaebf19, type: 3}
   currentRoomInstance: {fileID: 0}
   levelCompleteMenu: {fileID: 690618356}
   bDisplay: {fileID: 656190979}
