@@ -14,7 +14,7 @@ public class RoomManager : MonoBehaviour
 
     void Start()
     {
-        currentRoomIndex = 9;//DEV
+        currentRoomIndex = 0;//DEV
         LoadRoom(currentRoomIndex);//DEV
         //LoadRoom(0); // Début du jeu
     }
@@ -23,7 +23,14 @@ public class RoomManager : MonoBehaviour
     {
         if (GameStateManager.Instance.CurrentState != GameState.Playing)
             return;
+        /* -- FOR DEVELOPMENT -- */
+        // Permet de passer au niveau suivant
 
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            LoadNextRoom();
+            return;
+        }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
