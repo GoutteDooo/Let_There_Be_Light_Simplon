@@ -23,7 +23,14 @@ public class RoomManager : MonoBehaviour
     {
         if (GameStateManager.Instance.CurrentState != GameState.Playing)
             return;
+        /* -- FOR DEVELOPMENT -- */
+        // Permet de passer au niveau suivant
 
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            LoadNextRoom();
+            return;
+        }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
