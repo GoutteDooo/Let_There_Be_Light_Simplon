@@ -64,7 +64,7 @@ public class BulletController : MonoBehaviour
         //Debug.Log("La balle a touché : " + collision.gameObject.name);
 
         // Si elle touche une Target ou le joueur, on la détruit
-        if (collision.gameObject.layer == 6 || collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.layer == 6 && !collision.gameObject.GetComponent<TargetScript>().isTargetActive || collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }
