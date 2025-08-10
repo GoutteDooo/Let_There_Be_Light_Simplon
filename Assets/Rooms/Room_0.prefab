@@ -1947,6 +1947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8134408725919060045}
   - component: {fileID: 826669479571444325}
+  - component: {fileID: 5863926263253501614}
   m_Layer: 0
   m_Name: Room_0
   m_TagString: Untagged
@@ -1992,6 +1993,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletStock: 1
+--- !u!114 &5863926263253501614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3306760109556388130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74af9155bfa22714ab1993c182da728e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 9a93b804b9f79c94fb6b024d897529b3, type: 3}
+  loop: 1
+  fade: 1.5
+  playOnSpawn: 1
 --- !u!1 &3545857741832604297
 GameObject:
   m_ObjectHideFlags: 0
