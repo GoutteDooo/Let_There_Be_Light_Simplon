@@ -70,6 +70,8 @@ public class BulletController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Obstacle"))
         {
+            /* -- PFXs -- */
+            /* ---------- */
             if (bounceFX != null)
             {
                 Vector2 spawnPos = collision.contacts[0].point;
@@ -77,6 +79,7 @@ public class BulletController : MonoBehaviour
             }
 
             /* -- SFX -- */
+            /* --------- */
             if (collision.gameObject.layer == LayerMask.NameToLayer("Breakable"))
                 SFXManager.Instance.PlaySFX("BulletBounceBreakable");
             else if (collision.gameObject.layer == LayerMask.NameToLayer("Target"))

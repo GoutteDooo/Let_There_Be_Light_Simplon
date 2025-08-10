@@ -185,7 +185,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 0.27796763, w: -0.9605904}
   m_LocalPosition: {x: -2.72, y: 8.62, z: 0}
   m_LocalScale: {x: 23, y: 23, z: 0}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5618238574051775184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -32.278}
@@ -939,7 +939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000481055508299446, guid: 31709084ae9871042a9855090b515066, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4541868281504670098, guid: 31709084ae9871042a9855090b515066, type: 3}
       propertyPath: m_SortingOrder
