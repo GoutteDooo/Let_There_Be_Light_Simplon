@@ -21,7 +21,7 @@ public class PlayermovementScript : MonoBehaviour
     void OnGameStateChanged(GameState newState)
     {
         if (newState == GameState.Won)
-            _animator.SetBool("isWon", true);
+            _animator.SetTrigger("isWon");
     }
 
     void Update()
