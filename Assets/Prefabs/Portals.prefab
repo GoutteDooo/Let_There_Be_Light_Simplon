@@ -125,8 +125,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9ecb72c2f29db498e7ed3bc1f83738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkedPortal: {fileID: 4153366594397513248}
-  invertExitOffset: 0
+  linkedPortal: {fileID: 0}
+  invertLocalX: 0
+  invertLocalY: 0
+  exitPush: 0.3
+  forwardAxis: 0
+  ignoreTime: 0.1
 --- !u!70 &8423502660057896617
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -161,8 +165,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.49000013, y: 0.19000004}
+  m_Offset: {x: 0.000000095026635, y: -0.009529118}
+  m_Size: {x: 0.43215248, y: 0.03865543}
   m_Direction: 1
 --- !u!1 &2283808294368121043
 GameObject:
@@ -376,8 +380,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9ecb72c2f29db498e7ed3bc1f83738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkedPortal: {fileID: 885487064099215792}
-  invertExitOffset: 0
+  linkedPortal: {fileID: 0}
+  invertLocalX: 0
+  invertLocalY: 0
+  exitPush: 0.3
+  forwardAxis: 0
+  ignoreTime: 0.1
 --- !u!70 &5612032694725084429
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -412,8 +420,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.49000013, y: 0.19000004}
+  m_Offset: {x: -9.05989e-17, y: -0.008166223}
+  m_Size: {x: 0.41553304, y: 0.02845496}
   m_Direction: 1
 --- !u!1 &4822120314229484587
 GameObject:

@@ -75,9 +75,7 @@ public class Shooting : MonoBehaviour
                 _bulletLefts -= 1;
                 FindFirstObjectByType<BulletsCountdownLogic>().DisplayBullets();
                 _hasShot = true; // Lance le timer plus haut
-                ScreenShake sc = Object.FindFirstObjectByType<ScreenShake>();
-                if (sc != null)
-                    sc.Shake(0.2f, 0.1f);
+                Object.FindAnyObjectByType<ScreenShake>().Shake(0.2f, 0.1f); // Screenshake
             }
         }
     }

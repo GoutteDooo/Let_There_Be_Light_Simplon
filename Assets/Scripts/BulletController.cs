@@ -55,6 +55,8 @@ public class BulletController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Object.FindAnyObjectByType<ScreenShake>().Shake(0.1f, 0.04f); // Screenshake
+
         // Si balle touche joueur, partie perdue
         if (collision.gameObject.CompareTag("Player"))
         {
