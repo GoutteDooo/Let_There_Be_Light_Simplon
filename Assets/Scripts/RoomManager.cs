@@ -100,6 +100,12 @@ public class RoomManager : MonoBehaviour
         failCheckTimer = 0f;
         roomJustLoaded = true;
 
+        var roomMusic = currentRoomInstance.GetComponentInChildren<RoomMusic>(true);
+        if (roomMusic && roomMusic.playOnSpawn && roomMusic.clip)
+        {
+            MusicManager.Instance.Play(roomMusic.clip, roomMusic.loop, roomMusic.fade);
+        }
+
         // Affichage UI des bullets
         BulletsCountdownLogic ui = GameObject.FindFirstObjectByType<BulletsCountdownLogic>();
         if (ui != null)
