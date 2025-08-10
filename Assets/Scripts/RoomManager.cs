@@ -120,6 +120,9 @@ public class RoomManager : MonoBehaviour
         // Récupère les targets dans cette room
         currentTargets = currentRoomInstance.GetComponentsInChildren<TargetScript>();
 
+        // Stop les sfx en cours (s'il y'en a)
+        SFXManager.Instance.StopAllLoopSFX();
+
         // Et on joue
         if (roomJustLoaded) // On attend que la transition se fasse avant
             GameStateManager.Instance.SetState(GameState.Playing);

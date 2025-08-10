@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/**
+ * Instanciée lorsque le joueur tire
+ * Rattaché à la bullet
+ */
 public class BulletController : MonoBehaviour
 {
     private Vector3 _mousePos;
@@ -36,6 +40,8 @@ public class BulletController : MonoBehaviour
         // On applique une force initiale vers le haut et sur le côté
         _rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * force;
 
+        SFXManager.Instance.PlayLoopSFX("Electricite");
+
         // TODO : Récupérer le temps de feu à partir du niveau actuel
         // Actuellement, on va set à 15s
         livingTime = 15f;
@@ -49,6 +55,7 @@ public class BulletController : MonoBehaviour
         // Détruire la bullet après un certain temps
         if (_timer > livingTime)
         {
+            SFXManager.Instance.StopAllLoopSFX();
             Destroy(gameObject);
         }
     }
@@ -64,7 +71,15 @@ public class BulletController : MonoBehaviour
             if (collision.gameObject.layer == LayerMask.NameToLayer("Breakable"))
                 SFXManager.Instance.PlaySFX("BulletBounceBreakable");
             else if (collision.gameObject.layer == LayerMask.NameToLayer("Target"))
-                SFXManager.Instance.PlaySFX("BulletTarget");
+            {
+                if (!collision.gameObject.GetComponent<TargetScript>().isTargetActive)
+                {
+                    SFXManager.Instance.PlaySFX("BulletTarget");
+                    SFXManager.Instance.PlaySFX("TargetSparks");
+                }
+                else
+                    SFXManager.Instance.PlaySFX("BulletBounce");
+            }
             else
                 SFXManager.Instance.PlaySFX("BulletBounce");
         }
@@ -81,6 +96,7 @@ public class BulletController : MonoBehaviour
         // Si elle touche une Target ou le joueur, on la détruit
         if (collision.gameObject.layer == 6 && !collision.gameObject.GetComponent<TargetScript>().isTargetActive || collision.gameObject.CompareTag("Player"))
         {
+            SFXManager.Instance.StopAllLoopSFX();
             Destroy(gameObject);
         }
     }

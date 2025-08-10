@@ -299,6 +299,12 @@ MonoBehaviour:
   - name: BulletBounceBreakable
     clip: {fileID: 8300000, guid: a6f306851a3732846be5496b54dc6b20, type: 3}
     volume: 1
+  - name: Shoot
+    clip: {fileID: 8300000, guid: e607d28a41468e04ea60d637e838b2dc, type: 3}
+    volume: 1
+  - name: Electricite
+    clip: {fileID: 8300000, guid: b1648d970993d1a4c95300590813c6c1, type: 3}
+    volume: 0.4
 --- !u!4 &258184863
 Transform:
   m_ObjectHideFlags: 0
