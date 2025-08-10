@@ -308,6 +308,18 @@ MonoBehaviour:
   - name: TargetSparks
     clip: {fileID: 8300000, guid: b4425b1b6106e09488ebd388a591e2db, type: 3}
     volume: 1
+  - name: BulletOutSparks
+    clip: {fileID: 8300000, guid: e2feee0f5bc916c4388889416a5f05cc, type: 3}
+    volume: 1
+  - name: BulletOut
+    clip: {fileID: 8300000, guid: b3376644bc288a2478d8f0d4493a2207, type: 3}
+    volume: 1
+  - name: Death
+    clip: {fileID: 8300000, guid: afb13ce84fbaf5d4eb3b66f948ecc9b5, type: 3}
+    volume: 1
+  - name: Lose
+    clip: {fileID: 8300000, guid: c3270d2de5a12e84ebe08312f4741076, type: 3}
+    volume: 1
 --- !u!4 &258184863
 Transform:
   m_ObjectHideFlags: 0

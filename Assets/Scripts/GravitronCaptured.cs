@@ -42,6 +42,7 @@ public class GravitronCaptured : MonoBehaviour
         }
 
         if (destroyDelay > 0f) yield return new WaitForSeconds(destroyDelay);
+        SFXManager.Instance.StopSFX("Electricite");
         Destroy(gameObject);
     }
 }
