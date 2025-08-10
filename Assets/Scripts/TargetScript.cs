@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class TargetScript : MonoBehaviour
 {
@@ -19,11 +20,18 @@ public class TargetScript : MonoBehaviour
     {
         if (collision.gameObject.layer == 3 && !isTargetActive)
         {
+            Object.FindAnyObjectByType<ScreenShake>().Shake(0.2f, 0.06f); // Screenshake
+
             isTargetActive = true;
             Inactive.SetActive(false);
             Active.SetActive(true);
             Debug.Log("Target is active");
-            Instantiate(targetHitAnimation);
+
+            // Particules - Electricité
+            GameObject pfx = Instantiate(targetHitAnimation, this.transform);
+            pfx.transform.position = this.transform.position;
+
+
         }
     }
 }

@@ -74,8 +74,9 @@ public class BulletController : MonoBehaviour
             /* ---------- */
             if (bounceFX != null)
             {
-                if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+                if (collision.gameObject.CompareTag("Obstacle") && collision.gameObject.layer != LayerMask.NameToLayer("Target"))
                 {
+                    Debug.Log("rebond PFX");
                     BulletBouncePFX.Spawn(bounceFX, collision);
                 }
             }
