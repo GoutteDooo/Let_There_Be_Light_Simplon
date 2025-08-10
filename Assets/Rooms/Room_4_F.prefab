@@ -13146,6 +13146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windows: {fileID: 7031635607256759327}
+  includeInactiveTargets: 1
+  activate: 1
 --- !u!1 &7436711597087851421
 GameObject:
   m_ObjectHideFlags: 0
@@ -16396,10 +16398,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3695563055526974303}
     m_Modifications:
-    - target: {fileID: 3499462710339665101, guid: a89578a77234d62498bc660d442ffc0f, type: 3}
-      propertyPath: m_SortingOrder
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 3746476413930388375, guid: a89578a77234d62498bc660d442ffc0f, type: 3}
       propertyPath: m_Name
       value: Target
@@ -16868,6 +16866,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windows: {fileID: 0}
+  includeInactiveTargets: 1
+  activate: 1
 --- !u!1001 &4925202393123745501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17383,6 +17383,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5100153473785487620}
     m_Modifications:
+    - target: {fileID: 195816978112084157, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.7616656
+      objectReference: {fileID: 0}
+    - target: {fileID: 195816978112084157, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 195816978112084157, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04484
+      objectReference: {fileID: 0}
     - target: {fileID: 1436913459732320485, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
       propertyPath: m_Color.a
       value: 0
