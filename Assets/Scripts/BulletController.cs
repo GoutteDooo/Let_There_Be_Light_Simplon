@@ -75,7 +75,7 @@ public class BulletController : MonoBehaviour
             if (bounceFX != null)
             {
                 Vector2 spawnPos = collision.contacts[0].point;
-                Instantiate(bounceFX, spawnPos, Quaternion.identity);
+                BulletBouncePFX.Spawn(bounceFX, collision);
             }
 
             /* -- SFX -- */

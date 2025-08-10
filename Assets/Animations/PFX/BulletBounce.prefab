@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1824946985665262726}
   - component: {fileID: 2385386636393676294}
   - component: {fileID: 1564189070074384349}
+  - component: {fileID: 5990436680640089898}
   m_Layer: 0
   m_Name: BulletBounce
   m_TagString: Untagged
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 7325655498875269979, guid: b271c5d8179b4ec4ab0b2179ab45a5e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -123,3 +124,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5798d744990474640bb36e1e09dbb839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5990436680640089898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6697069321706958638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44f59cd552cf3b41a033df585e84f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fxScale: 3.5
+  spawnOffset: 0.02
+  angleOffset: 0
+  autoDestroyOnAnimEnd: 1
+  lifeTimeOverride: -1
