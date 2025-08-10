@@ -351,10 +351,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 885487064099215792, guid: efa8f69e4fd128c409c2dc78ed49db63, type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
-      objectReference: {fileID: 0}
     - target: {fileID: 2283808294368121043, guid: efa8f69e4fd128c409c2dc78ed49db63, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -366,10 +362,6 @@ PrefabInstance:
     - target: {fileID: 4153366594397513248, guid: efa8f69e4fd128c409c2dc78ed49db63, type: 3}
       propertyPath: m_Layer
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4153366594397513248, guid: efa8f69e4fd128c409c2dc78ed49db63, type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4397983787035226070, guid: efa8f69e4fd128c409c2dc78ed49db63, type: 3}
       propertyPath: m_LocalPosition.x

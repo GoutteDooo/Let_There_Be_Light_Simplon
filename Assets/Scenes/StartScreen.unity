@@ -290,8 +290,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: MetalBounce
+  - name: BulletBounce
     clip: {fileID: 8300000, guid: 61ef90af61127e34ebd840f7353aea9c, type: 3}
+    volume: 1
+  - name: BulletTarget
+    clip: {fileID: 8300000, guid: c4a0f4bdb870ab24796e37973e377b62, type: 3}
+    volume: 1
+  - name: BulletBounceBreakable
+    clip: {fileID: 8300000, guid: a6f306851a3732846be5496b54dc6b20, type: 3}
     volume: 1
 --- !u!4 &258184863
 Transform:

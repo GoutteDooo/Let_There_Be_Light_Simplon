@@ -53,9 +53,22 @@ public class BulletController : MonoBehaviour
         }
     }
 
+    // Rebond sur n'importe quelle surface
     void OnCollisionEnter2D(Collision2D collision)
     {
         Object.FindAnyObjectByType<ScreenShake>().Shake(0.1f, 0.04f); // Screenshake
+
+        /* -- SFX -- */
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Breakable"))
+                SFXManager.Instance.PlaySFX("BulletBounceBreakable");
+            else if (collision.gameObject.layer == LayerMask.NameToLayer("Target"))
+                SFXManager.Instance.PlaySFX("BulletTarget");
+            else
+                SFXManager.Instance.PlaySFX("BulletBounce");
+        }
+
 
         // Si balle touche joueur, partie perdue
         if (collision.gameObject.CompareTag("Player"))
