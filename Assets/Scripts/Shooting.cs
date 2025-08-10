@@ -65,6 +65,7 @@ public class Shooting : MonoBehaviour
             }
         }
 
+        /* - TIR DU JOUEUR - */
         if (Input.GetMouseButton(0) && CanFire())
         {
             RoomManager manager = Object.FindFirstObjectByType<RoomManager>();
@@ -72,10 +73,11 @@ public class Shooting : MonoBehaviour
             {
                 Instantiate(bullet, bulletTransform.position, Quaternion.identity, manager.currentRoomInstance.transform);
                 _bulletLefts -= 1;
-                Debug.Log("BCL : " + FindFirstObjectByType<BulletsCountdownLogic>());
                 FindFirstObjectByType<BulletsCountdownLogic>().DisplayBullets();
                 _hasShot = true; // Lance le timer plus haut
-                Debug.Log("balles restantes : " + _bulletLefts);
+                ScreenShake sc = Object.FindFirstObjectByType<ScreenShake>();
+                if (sc != null)
+                    sc.Shake(0.2f, 0.1f);
             }
         }
     }
