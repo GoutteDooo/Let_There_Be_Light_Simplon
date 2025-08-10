@@ -6,6 +6,7 @@ public class TurnOnLights : MonoBehaviour
     [SerializeField] private bool includeInactiveTargets = true;
 
     private RoomManager roomManager;
+    public bool activate = true;
 
     void Awake()
     {
@@ -27,17 +28,17 @@ public class TurnOnLights : MonoBehaviour
         if (targets.Length == 0)
         {
             // Au choix : ne rien faire, ou forcer l’extinction
-            windows.SetActive(false);
+            windows.SetActive(activate);
             return;
         }
 
         // Active la lumière uniquement si TOUTES les cibles sont actives
-        bool allActive = true;
+        bool allActive = activate;
         foreach (var t in targets)
         {
             if (t == null || !t.isTargetActive)
             {
-                allActive = false;
+                allActive = !activate;
                 break;
             }
         }
