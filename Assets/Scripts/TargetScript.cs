@@ -6,6 +6,7 @@ public class TargetScript : MonoBehaviour
     public bool isTargetActive = false;
     public GameObject Inactive;
     public GameObject Active;
+    public GameObject targetHitAnimation;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,6 +23,7 @@ public class TargetScript : MonoBehaviour
             Inactive.SetActive(false);
             Active.SetActive(true);
             Debug.Log("Target is active");
+            Instantiate(targetHitAnimation);
         }
     }
 }
