@@ -4,6 +4,7 @@ public class PlayermovementScript : MonoBehaviour
 {
     public Transform arm;       // The arm whose rotation we check
     public Transform modelRoot; // The main model to flip
+    [SerializeField] Animator _animator;
 
     private bool flipped = false;
 
@@ -28,5 +29,10 @@ public class PlayermovementScript : MonoBehaviour
             flipped ? 180f : 0f,
             modelRoot.localEulerAngles.z
         );
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        _animator.SetBool("isHit", true);
     }
 }
