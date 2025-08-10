@@ -21,6 +21,9 @@ public class MusicManager : MonoBehaviour
 
     [Header("Musique par scène (optionnel)")]
     public List<SceneTrack> sceneTracks = new(); // associer scènes -> musiques
+    // Connaître le clip en cours
+    public AudioClip CurrentClip => _active != null ? _active.clip : null;
+
 
     // --- Runtime
     private AudioSource _a;

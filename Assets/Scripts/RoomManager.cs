@@ -103,7 +103,9 @@ public class RoomManager : MonoBehaviour
         var roomMusic = currentRoomInstance.GetComponentInChildren<RoomMusic>(true);
         if (roomMusic && roomMusic.playOnSpawn && roomMusic.clip)
         {
-            MusicManager.Instance.Play(roomMusic.clip, roomMusic.loop, roomMusic.fade);
+            // Si la musique change
+            if (MusicManager.Instance.CurrentClip != roomMusic.clip)
+                MusicManager.Instance.Play(roomMusic.clip, roomMusic.loop, roomMusic.fade);
         }
 
         // Affichage UI des bullets

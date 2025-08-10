@@ -1992,7 +1992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c472c7429bddb2a4e89221a13142a622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletStock: 1
+  bulletStock: 3
 --- !u!114 &5863926263253501614
 MonoBehaviour:
   m_ObjectHideFlags: 0
