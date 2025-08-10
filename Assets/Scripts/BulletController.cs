@@ -14,6 +14,7 @@ public class BulletController : MonoBehaviour
     public bool recentlyTeleported = false;
     private float _timer;
     public float livingTime;
+    public GameObject bounceFX;
     void OnEnable()
     {
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
@@ -67,9 +68,15 @@ public class BulletController : MonoBehaviour
     {
         Object.FindAnyObjectByType<ScreenShake>().Shake(0.1f, 0.04f); // Screenshake
 
-        /* -- SFX -- */
         if (collision.gameObject.CompareTag("Obstacle"))
         {
+            if (bounceFX != null)
+            {
+                Vector2 spawnPos = collision.contacts[0].point;
+                Instantiate(bounceFX, spawnPos, Quaternion.identity);
+            }
+
+            /* -- SFX -- */
             if (collision.gameObject.layer == LayerMask.NameToLayer("Breakable"))
                 SFXManager.Instance.PlaySFX("BulletBounceBreakable");
             else if (collision.gameObject.layer == LayerMask.NameToLayer("Target"))

@@ -257,6 +257,7 @@ MonoBehaviour:
   force: 7
   recentlyTeleported: 0
   livingTime: 0
+  bounceFX: {fileID: 6697069321706958638, guid: edd2eecaef5abe2479e79911fe64c26f, type: 3}
 --- !u!1 &6625634265751098901
 GameObject:
   m_ObjectHideFlags: 0
