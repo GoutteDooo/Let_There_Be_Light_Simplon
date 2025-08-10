@@ -305,6 +305,9 @@ MonoBehaviour:
   - name: Electricite
     clip: {fileID: 8300000, guid: b1648d970993d1a4c95300590813c6c1, type: 3}
     volume: 0.4
+  - name: TargetSparks
+    clip: {fileID: 8300000, guid: b4425b1b6106e09488ebd388a591e2db, type: 3}
+    volume: 1
 --- !u!4 &258184863
 Transform:
   m_ObjectHideFlags: 0

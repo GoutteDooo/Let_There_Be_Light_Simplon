@@ -93,6 +93,7 @@ public class BulletController : MonoBehaviour
             GameStateManager.Instance.SetState(GameState.Lost);
             SFXManager.Instance.PlaySFX("BulletOutSparks");
             SFXManager.Instance.PlaySFX("BulletOut");
+            SFXManager.Instance.PlaySFX("Death");
         }
 
         //Debug.Log("La balle a touché : " + collision.gameObject.name);
