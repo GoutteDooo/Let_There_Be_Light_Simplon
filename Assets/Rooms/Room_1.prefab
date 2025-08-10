@@ -539,6 +539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windows: {fileID: 7164083260207747492}
   includeInactiveTargets: 1
+  activate: 1
 --- !u!1 &1622920960211643922
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +789,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -10
+  m_SortingOrder: -100
   m_Sprite: {fileID: -4965199886648780354, guid: caf7611781ef454409dfd1d64be7506e, type: 3}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
   m_FlipX: 0
@@ -1932,6 +1933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windows: {fileID: 6208188896639500271}
   includeInactiveTargets: 1
+  activate: 1
 --- !u!1 &5991303171481715497
 GameObject:
   m_ObjectHideFlags: 0
@@ -2610,6 +2612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windows: {fileID: 5644047540056753020}
   includeInactiveTargets: 1
+  activate: 1
 --- !u!1 &8584463267937939373
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,6 +2804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windows: {fileID: 5775670708098266858}
   includeInactiveTargets: 1
+  activate: 1
 --- !u!1001 &255471398467515370
 PrefabInstance:
   m_ObjectHideFlags: 0
