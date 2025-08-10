@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class PlayermovementScript : MonoBehaviour
@@ -7,6 +8,21 @@ public class PlayermovementScript : MonoBehaviour
     [SerializeField] Animator _animator;
 
     private bool flipped = false;
+    void OnEnable()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    void OnDisable()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+
+    void OnGameStateChanged(GameState newState)
+    {
+        if (newState == GameState.Won)
+            _animator.SetBool("isWon", true);
+    }
 
     void Update()
     {
