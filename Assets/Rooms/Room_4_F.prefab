@@ -1940,7 +1940,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071073, w: 0.70710635}
   m_LocalPosition: {x: 0.26347202, y: -0.0012907515, z: 0}
-  m_LocalScale: {x: 1.4613559, y: 0.52626896, z: 2.5725}
+  m_LocalScale: {x: 0.69414407, y: 0.06578362, z: 2.5725}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7835363171627408455}
@@ -1989,7 +1989,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: -859844854, guid: 69ded1f72f671744887eedf7171b8510, type: 3}
+  m_Sprite: {fileID: 617636037, guid: 69ded1f72f671744887eedf7171b8510, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2771,7 +2771,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -10
   m_Sprite: {fileID: 541837422, guid: 3530b8cc8c91d4544bc5b1185c3a42ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3206,7 +3206,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -10
   m_Sprite: {fileID: 1785428088, guid: 3530b8cc8c91d4544bc5b1185c3a42ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8513,7 +8513,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -10
   m_Sprite: {fileID: 541837422, guid: 3530b8cc8c91d4544bc5b1185c3a42ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -13744,6 +13744,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1436913459732320485, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436913459732320485, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
       propertyPath: m_SortingOrder
       value: -7
       objectReference: {fileID: 0}
@@ -13803,8 +13807,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building
       objectReference: {fileID: 0}
+    - target: {fileID: 4044008519747761728, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343973426568365172, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5603348776462572633, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2946788133440385690, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
       insertIndex: -1
@@ -13836,6 +13849,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5551933235708023583}
     m_Modifications:
+    - target: {fileID: 195816978112084157, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1356385
+      objectReference: {fileID: 0}
+    - target: {fileID: 195816978112084157, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5649503
+      objectReference: {fileID: 0}
     - target: {fileID: 1436913459732320485, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -13923,6 +13944,14 @@ PrefabInstance:
     - target: {fileID: 4044008519747761728, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
       propertyPath: m_Name
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343973426568365172, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 617636037, guid: 69ded1f72f671744887eedf7171b8510, type: 3}
+    - target: {fileID: 6343973426568365172, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3816293596766375656, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
