@@ -55,6 +55,8 @@ public class BulletController : MonoBehaviour
         // Détruire la bullet après un certain temps
         if (_timer > livingTime)
         {
+            SFXManager.Instance.PlaySFX("BulletOutSparks");
+            SFXManager.Instance.PlaySFX("BulletOut");
             SFXManager.Instance.StopAllLoopSFX();
             Destroy(gameObject);
         }
@@ -89,6 +91,8 @@ public class BulletController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             GameStateManager.Instance.SetState(GameState.Lost);
+            SFXManager.Instance.PlaySFX("BulletOutSparks");
+            SFXManager.Instance.PlaySFX("BulletOut");
         }
 
         //Debug.Log("La balle a touché : " + collision.gameObject.name);
