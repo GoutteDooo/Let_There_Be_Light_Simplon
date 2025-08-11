@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviour
 {
+    public static RoomManager Instance;
+
     public GameObject[] roomPrefabs;
     public GameObject currentRoomInstance;
     private int currentRoomIndex = 0;
@@ -12,6 +14,19 @@ public class RoomManager : MonoBehaviour
     private bool roomJustLoaded = true;
     public GameObject bDisplay;
 
+    private void Awake()
+    {
+        // Simple singleton setup
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
     void Start()
     {
         currentRoomIndex = 0;//DEV
@@ -88,7 +103,7 @@ public class RoomManager : MonoBehaviour
         }
     }
 
-    void LoadRoom(int index)
+    public void LoadRoom(int index)
     {
         // Détruire la room actuelle
         if (currentRoomInstance != null)
@@ -131,7 +146,7 @@ public class RoomManager : MonoBehaviour
     public void LoadNextRoom()
     {
         currentRoomIndex++;
-        if (currentRoomIndex < roomPrefabs.Length)
+        if (currentRoomIndex < roomPrefabs.Length -1)
         {
             LoadRoom(currentRoomIndex);
         }
