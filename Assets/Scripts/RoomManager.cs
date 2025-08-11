@@ -7,7 +7,7 @@ public class RoomManager : MonoBehaviour
 
     public GameObject[] roomPrefabs;
     public GameObject currentRoomInstance;
-    private int currentRoomIndex = 0;
+    public int currentRoomIndex = 0;
     private TargetScript[] currentTargets;
     public GameObject levelCompleteMenu;
     private float failCheckTimer = 0f;
@@ -145,6 +145,10 @@ public class RoomManager : MonoBehaviour
 
     public void LoadNextRoom()
     {
+        if (currentRoomIndex == 14)
+        {
+            currentRoomIndex = 0;
+        }
         currentRoomIndex++;
         if (currentRoomIndex < roomPrefabs.Length -1)
         {
