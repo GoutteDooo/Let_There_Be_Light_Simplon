@@ -1,49 +1,19 @@
 fileFormatVersion: 2
-guid: 5ddd8ab91bcda3f47b4b847bcd30f2c0
+guid: 9b4c7a7d14cc792469281d6daf29ace6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4050956828587923592
-    second: Eletric A-Sheet_0
+      213: 790868837747403133
+    second: gravity-gun-removebg-preview_0
   - first:
-      213: -6679910029127191355
-    second: Eletric A-Sheet_1
+      213: 197042433297463453
+    second: gravity-gun-removebg-preview_1
   - first:
-      213: -1762790638875795528
-    second: Eletric A-Sheet_2
+      213: -9076856580129713226
+    second: gravity-gun-removebg-preview_2
   - first:
-      213: -4902331473897476504
-    second: Eletric A-Sheet_3
-  - first:
-      213: -5998105193788091524
-    second: Eletric A-Sheet_4
-  - first:
-      213: -3321793827583645432
-    second: Eletric A-Sheet_5
-  - first:
-      213: -3355725811928575276
-    second: Eletric A-Sheet_6
-  - first:
-      213: 1636792488084076369
-    second: Eletric A-Sheet_7
-  - first:
-      213: -803074067519869265
-    second: Eletric A-Sheet_8
-  - first:
-      213: -9159455713521164821
-    second: Eletric A-Sheet_9
-  - first:
-      213: -1740335962384464395
-    second: Eletric A-Sheet_10
-  - first:
-      213: 6219367801912151915
-    second: Eletric A-Sheet_11
-  - first:
-      213: 6010477893160921927
-    second: Eletric A-Sheet_12
-  - first:
-      213: -3956216886489063127
-    second: Eletric A-Sheet_13
+      213: 5850817655941723380
+    second: gravity-gun-removebg-preview_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Eletric A-Sheet_0
+      name: gravity-gun-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 96
-        height: 96
+        x: 125
+        y: 419
+        width: 217
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 877e29f2a3c18c7c0800000000000000
-      internalID: -4050956828587923592
+      spriteID: d792cd9840bb9fa00800000000000000
+      internalID: 790868837747403133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Eletric A-Sheet_1
+      name: gravity-gun-removebg-preview_1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
-        width: 96
-        height: 96
+        x: 133
+        y: 290
+        width: 99
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c4fd4e58313c43a0800000000000000
-      internalID: -6679910029127191355
+      spriteID: d98bf529c090cb200800000000000000
+      internalID: 197042433297463453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Eletric A-Sheet_2
+      name: gravity-gun-removebg-preview_2
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
-        width: 96
-        height: 96
+        x: 85
+        y: 151
+        width: 325
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8bf9c6ce04f4987e0800000000000000
-      internalID: -1762790638875795528
+      spriteID: 6b393381807880280800000000000000
+      internalID: -9076856580129713226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Eletric A-Sheet_3
+      name: gravity-gun-removebg-preview_3
       rect:
         serializedVersion: 2
-        x: 0
+        x: 120
         y: 0
-        width: 96
-        height: 96
+        width: 214
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,30 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86eaf178f7b67fbb0800000000000000
-      internalID: -4902331473897476504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric A-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c73d5d60b1372cca0800000000000000
-      internalID: -5998105193788091524
+      spriteID: 4f47dfbb8a7423150800000000000000
+      internalID: 5850817655941723380
       vertices: []
       indices: 
       edges: []
@@ -265,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b6b04668ee1712a41b40f1a2dbb7e910
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -273,15 +221,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Eletric A-Sheet_0: -4050956828587923592
-      Eletric A-Sheet_1: -6679910029127191355
-      Eletric A-Sheet_2: -1762790638875795528
-      Eletric A-Sheet_3: -4902331473897476504
-      Eletric A-Sheet_4: -5998105193788091524
+      gravity-gun-removebg-preview_0: 790868837747403133
+      gravity-gun-removebg-preview_1: 197042433297463453
+      gravity-gun-removebg-preview_2: -9076856580129713226
+      gravity-gun-removebg-preview_3: 5850817655941723380
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
