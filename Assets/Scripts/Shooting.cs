@@ -103,4 +103,9 @@ public class Shooting : MonoBehaviour
     {
         return _bulletLefts;
     }
+
+    public bool HasShot()
+    {
+        return _hasShot;
+    }
 }
