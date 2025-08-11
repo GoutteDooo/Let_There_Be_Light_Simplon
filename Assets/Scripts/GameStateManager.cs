@@ -37,5 +37,18 @@ public class GameStateManager : MonoBehaviour
             OnGameStateChanged?.Invoke(newState); // Notifie les abonnés
             Debug.Log($"GameState changed to: {newState}");
         }
+
+        // SFXs
+        switch (newState)
+        {
+            case GameState.Lost:
+                SFXManager.Instance.PlaySFX("Lose");
+                break;
+            case GameState.Won:
+                SFXManager.Instance.PlaySFX("LevelComplete");
+                break;
+            default:
+                break;
+        }
     }
 }

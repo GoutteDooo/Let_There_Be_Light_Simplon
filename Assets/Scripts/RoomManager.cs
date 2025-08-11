@@ -100,6 +100,14 @@ public class RoomManager : MonoBehaviour
         failCheckTimer = 0f;
         roomJustLoaded = true;
 
+        var roomMusic = currentRoomInstance.GetComponentInChildren<RoomMusic>(true);
+        if (roomMusic && roomMusic.playOnSpawn && roomMusic.clip)
+        {
+            // Si la musique change
+            if (MusicManager.Instance.CurrentClip != roomMusic.clip)
+                MusicManager.Instance.Play(roomMusic.clip, roomMusic.loop, roomMusic.fade, roomMusic.replayOnLoop);
+        }
+
         // Affichage UI des bullets
         BulletsCountdownLogic ui = GameObject.FindFirstObjectByType<BulletsCountdownLogic>();
         if (ui != null)
@@ -111,6 +119,9 @@ public class RoomManager : MonoBehaviour
 
         // Récupère les targets dans cette room
         currentTargets = currentRoomInstance.GetComponentsInChildren<TargetScript>();
+
+        // Stop les sfx en cours (s'il y'en a)
+        SFXManager.Instance.StopAllLoopSFX();
 
         // Et on joue
         if (roomJustLoaded) // On attend que la transition se fasse avant

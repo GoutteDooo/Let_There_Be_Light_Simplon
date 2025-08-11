@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 143839063}
   - component: {fileID: 143839062}
+  - component: {fileID: 143839064}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -163,6 +164,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &143839064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143839061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ec966dd1319704890a68ec49507f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 0}
+  musicVolumeParam: MusicVolume
+  defaultFade: 1.5
+  persistAcrossScenes: 1
+  sceneTracks: []
 --- !u!1 &195303470
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +260,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195303470}
   m_CullTransparentMesh: 1
+--- !u!1 &258184861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 258184863}
+  - component: {fileID: 258184862}
+  m_Layer: 0
+  m_Name: SFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &258184862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258184861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6d896bff2c1934ea171aa9bf1f0850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: BulletBounce
+    clip: {fileID: 8300000, guid: 61ef90af61127e34ebd840f7353aea9c, type: 3}
+    volume: 1
+  - name: BulletTarget
+    clip: {fileID: 8300000, guid: c4a0f4bdb870ab24796e37973e377b62, type: 3}
+    volume: 1
+  - name: BulletBounceBreakable
+    clip: {fileID: 8300000, guid: a6f306851a3732846be5496b54dc6b20, type: 3}
+    volume: 1
+  - name: Shoot
+    clip: {fileID: 8300000, guid: e607d28a41468e04ea60d637e838b2dc, type: 3}
+    volume: 1
+  - name: Electricite
+    clip: {fileID: 8300000, guid: b1648d970993d1a4c95300590813c6c1, type: 3}
+    volume: 0.4
+  - name: TargetSparks
+    clip: {fileID: 8300000, guid: b4425b1b6106e09488ebd388a591e2db, type: 3}
+    volume: 1
+  - name: BulletOutSparks
+    clip: {fileID: 8300000, guid: e2feee0f5bc916c4388889416a5f05cc, type: 3}
+    volume: 1
+  - name: BulletOut
+    clip: {fileID: 8300000, guid: b3376644bc288a2478d8f0d4493a2207, type: 3}
+    volume: 1
+  - name: Death
+    clip: {fileID: 8300000, guid: afb13ce84fbaf5d4eb3b66f948ecc9b5, type: 3}
+    volume: 1
+  - name: Lose
+    clip: {fileID: 8300000, guid: c3270d2de5a12e84ebe08312f4741076, type: 3}
+    volume: 1
+  - name: LevelComplete
+    clip: {fileID: 8300000, guid: c46f10faf912c8a4db7cd196be51c1b1, type: 3}
+    volume: 1
+--- !u!4 &258184863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258184861}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &267000298
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,3 +999,4 @@ SceneRoots:
   - {fileID: 1898299265}
   - {fileID: 1880547494}
   - {fileID: 267000301}
+  - {fileID: 258184863}

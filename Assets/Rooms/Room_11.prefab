@@ -67,7 +67,6 @@ Transform:
   - {fileID: 4168965653627198749}
   - {fileID: 5551933235708023583}
   - {fileID: 5490571461791655996}
-  - {fileID: 1053053354774387690}
   - {fileID: 3446097197091471196}
   - {fileID: 2180845339892930222}
   - {fileID: 7129938382691601197}
@@ -103,37 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletStock: 5
---- !u!1 &3491777642336182133
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1053053354774387690}
-  m_Layer: 0
-  m_Name: Portauuuuux
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1053053354774387690
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3491777642336182133}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8134408725919060045}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5706170075482163388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2327,7 +2295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1896485959687399920, guid: c9e5bd0e7ef7f584790fbb22dda978d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.32
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1896485959687399920, guid: c9e5bd0e7ef7f584790fbb22dda978d4, type: 3}
       propertyPath: m_LocalPosition.z

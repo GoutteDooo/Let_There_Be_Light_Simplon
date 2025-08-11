@@ -1,11 +1,28 @@
+using UnityEditor;
 using UnityEngine;
 
 public class PlayermovementScript : MonoBehaviour
 {
     public Transform arm;       // The arm whose rotation we check
     public Transform modelRoot; // The main model to flip
+    [SerializeField] Animator _animator;
 
     private bool flipped = false;
+    void OnEnable()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    void OnDisable()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+
+    void OnGameStateChanged(GameState newState)
+    {
+        if (newState == GameState.Won)
+            _animator.SetTrigger("isWon");
+    }
 
     void Update()
     {
@@ -28,5 +45,10 @@ public class PlayermovementScript : MonoBehaviour
             flipped ? 180f : 0f,
             modelRoot.localEulerAngles.z
         );
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        _animator.SetBool("isHit", true);
     }
 }

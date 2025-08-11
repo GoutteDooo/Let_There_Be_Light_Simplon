@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1436913459732320485}
   - component: {fileID: 3816293596766375656}
   - component: {fileID: 1749490504564536616}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Breakable
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -149,3 +149,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletTag: Bullet
   destroyDelay: 0.2
+  disableColliderImmediately: 1
