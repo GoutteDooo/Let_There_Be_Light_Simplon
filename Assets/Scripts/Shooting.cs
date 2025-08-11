@@ -14,6 +14,8 @@ public class Shooting : MonoBehaviour
     private Vector3 mousePos;
     public GameObject bullet; // bullet that will be instantiated
     public Transform bulletTransform; // gun
+    public GameObject animShoot; // PFX
+
     private int _bulletLefts { get; set; } // Stock restant de bullet
     private bool _hasShot; // Pour définir un timing entre les tirs
     private float _timer;
@@ -77,6 +79,8 @@ public class Shooting : MonoBehaviour
                 _hasShot = true; // Lance le timer plus haut
                 Object.FindAnyObjectByType<ScreenShake>().Shake(0.2f, 0.1f); // Screenshake
                 SFXManager.Instance.PlaySFX("Shoot");
+                // PFX
+                Instantiate(animShoot, bulletTransform);
             }
         }
     }
