@@ -3457,10 +3457,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
-    - target: {fileID: 6343973426568365172, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5603348776462572633, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
