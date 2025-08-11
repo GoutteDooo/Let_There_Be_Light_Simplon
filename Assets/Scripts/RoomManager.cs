@@ -105,7 +105,7 @@ public class RoomManager : MonoBehaviour
         {
             // Si la musique change
             if (MusicManager.Instance.CurrentClip != roomMusic.clip)
-                MusicManager.Instance.Play(roomMusic.clip, roomMusic.loop, roomMusic.fade);
+                MusicManager.Instance.Play(roomMusic.clip, roomMusic.loop, roomMusic.fade, roomMusic.replayOnLoop);
         }
 
         // Affichage UI des bullets

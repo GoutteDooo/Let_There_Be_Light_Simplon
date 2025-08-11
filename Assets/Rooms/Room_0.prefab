@@ -2269,6 +2269,7 @@ MonoBehaviour:
   loop: 1
   fade: 1.5
   playOnSpawn: 1
+  replayOnLoop: 2.5
 --- !u!1 &3545857741832604297
 GameObject:
   m_ObjectHideFlags: 0

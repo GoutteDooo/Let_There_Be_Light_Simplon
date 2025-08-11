@@ -9,4 +9,6 @@ public class RoomMusic : MonoBehaviour
     public float fade = 1.5f;
     [Tooltip("Lance la musique dès l'apparition de la room")]
     public bool playOnSpawn = true;
+    [Tooltip("Replay la musique à la seconde donnée")]
+    public float replayOnLoop = 0f;
 }

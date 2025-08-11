@@ -31,6 +31,7 @@ public class MusicManager : MonoBehaviour
     private AudioSource _active;
     private Coroutine _fadeCo;
     private Coroutine _playlistCo;
+    private Coroutine _customLoopCo;
 
     [System.Serializable]
     public class SceneTrack
@@ -39,6 +40,7 @@ public class MusicManager : MonoBehaviour
         public AudioClip clip;
         public bool loop = true;
         public float fade = 1.5f;
+        public float replayOnLoop = 0f;
     }
 
     void Awake()
@@ -76,15 +78,16 @@ public class MusicManager : MonoBehaviour
 
     // ----- API PUBLIQUE -----
 
-    /// <summary>Lecture immédiate (avec crossfade si quelque chose joue déjà)</summary>
-    public void Play(AudioClip clip, bool loop = true, float fade = -1f)
-        => CrossfadeTo(clip, fade < 0 ? defaultFade : fade, loop);
+    /// <summary>Lecture immédiate avec loop start optionnel</summary>
+    public void Play(AudioClip clip, bool loop = true, float fade = -1f, float replayOnLoopStart = -1f)
+        => CrossfadeTo(clip, fade < 0 ? defaultFade : fade, loop, 0f, replayOnLoopStart);
 
-    /// <summary>Crossfade fluide vers un nouveau clip</summary>
-    public void CrossfadeTo(AudioClip next, float fadeDuration, bool loop = true, float startTime = 0f)
+    /// <summary>Crossfade fluide vers un nouveau clip, avec loop start optionnel.</summary>
+    public void CrossfadeTo(AudioClip next, float fadeDuration, bool loop = true, float startTime = 0f, float replayOnLoopStart = -1f)
     {
         if (next == null) return;
         if (_fadeCo != null) StopCoroutine(_fadeCo);
+        if (_customLoopCo != null) { StopCoroutine(_customLoopCo); _customLoopCo = null; } // <— NEW
 
         var from = _active;
         var to = (_active == _a) ? _b : _a;
@@ -92,9 +95,16 @@ public class MusicManager : MonoBehaviour
 
         to.clip = next;
         to.time = Mathf.Clamp(startTime, 0, next.length - 0.01f);
-        to.loop = loop;
+        to.loop = (replayOnLoopStart < 0f) && loop; // <— NEW: loop natif seulement si pas de loop perso
         to.volume = 0f;
         to.Play();
+
+        // NEW: si loop perso demandé, on le maintient avec une coroutine
+        if (replayOnLoopStart >= 0f)
+        {
+            float clamped = Mathf.Clamp(replayOnLoopStart, 0f, next.length - 0.01f);
+            _customLoopCo = StartCoroutine(CoMaintainCustomLoop(to, clamped));
+        }
 
         _fadeCo = StartCoroutine(CoCrossfade(from, to, Mathf.Max(0.01f, fadeDuration)));
     }
@@ -110,6 +120,7 @@ public class MusicManager : MonoBehaviour
     public void Stop(float fade = 0.5f)
     {
         if (_fadeCo != null) StopCoroutine(_fadeCo);
+        if (_customLoopCo != null) { StopCoroutine(_customLoopCo); _customLoopCo = null; } // <— NEW
         StartCoroutine(CoStop(fade));
     }
 
@@ -193,7 +204,34 @@ public class MusicManager : MonoBehaviour
         }
         _playlistCo = null;
     }
+    // NEW: maintient un « loop start » personnalisé (seek au moment voulu à chaque fin)
+    private IEnumerator CoMaintainCustomLoop(AudioSource src, float loopStart)
+    {
+        // petite marge pour déclencher le seek juste avant la fin
+        const float epsilon = 0.02f;
 
+        var clip = src.clip;
+        if (clip == null) yield break;
+
+        // on boucle tant que ce src reste le _active et que le même clip joue
+        while (src == _active && src.clip == clip)
+        {
+            if (src.isPlaying)
+            {
+                float remaining = clip.length - src.time;
+                if (remaining <= epsilon)
+                {
+                    // Seek « soft » : on remet la tête de lecture au loopStart sans Stop/Play pour éviter un clic
+                    src.time = loopStart;
+                }
+            }
+            // unscaledDeltaTime pour être insensible au timeScale
+            yield return null;
+        }
+
+        // sécurité
+        if (_customLoopCo != null && src != _active) _customLoopCo = null;
+    }
     private void Shuffle(List<AudioClip> list)
     {
         for (int i = 0; i < list.Count; i++)
