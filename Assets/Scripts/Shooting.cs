@@ -14,7 +14,7 @@ public class Shooting : MonoBehaviour
     private Vector3 mousePos;
     public GameObject bullet; // bullet that will be instantiated
     public Transform bulletTransform; // gun
-    private int bulletLefts { get; set; } // Stock restant de bullet
+    private int _bulletLefts { get; set; } // Stock restant de bullet
     private bool _hasShot; // Pour définir un timing entre les tirs
     private float _timer;
     private readonly float _timeBetweenFiring = 0.3f;
@@ -39,7 +39,7 @@ public class Shooting : MonoBehaviour
     {
         _hasShot = false;
         _mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        bulletLefts = GameObject.FindFirstObjectByType<RoomData>().bulletStock;
+        _bulletLefts = GameObject.FindFirstObjectByType<RoomData>().bulletStock;
     }
 
     // Update is called once per frame
@@ -65,17 +65,18 @@ public class Shooting : MonoBehaviour
             }
         }
 
+        /* - TIR DU JOUEUR - */
         if (Input.GetMouseButton(0) && CanFire())
         {
             RoomManager manager = Object.FindFirstObjectByType<RoomManager>();
             if (manager != null && manager.currentRoomInstance != null)
             {
                 Instantiate(bullet, bulletTransform.position, Quaternion.identity, manager.currentRoomInstance.transform);
-                bulletLefts -= 1;
-                Debug.Log("BCL : " + FindFirstObjectByType<BulletsCountdownLogic>());
+                _bulletLefts -= 1;
                 FindFirstObjectByType<BulletsCountdownLogic>().DisplayBullets();
                 _hasShot = true; // Lance le timer plus haut
-                Debug.Log("balles restantes : " + bulletLefts);
+                Object.FindAnyObjectByType<ScreenShake>().Shake(0.2f, 0.1f); // Screenshake
+                SFXManager.Instance.PlaySFX("Shoot");
             }
         }
     }
@@ -85,17 +86,17 @@ public class Shooting : MonoBehaviour
      */
     private bool CanFire()
     {
-        return bulletLefts > 0 && !_hasShot;
+        return _bulletLefts > 0 && !_hasShot;
     }
     /**
      * Retourne true si bullets restantes
      */
     public bool HasBulletLefts()
     {
-        return bulletLefts > 0;
+        return _bulletLefts > 0;
     }
     public int GetBulletLefts()
     {
-        return bulletLefts;
+        return _bulletLefts;
     }
 }
