@@ -1623,6 +1623,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7645570811638081537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954788158525188436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a8c98f16083a546a92a31cda1bd5cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windows: {fileID: 6208188896639500271}
+  includeInactiveTargets: 1
+  activate: 1
 --- !u!1 &5991303171481715497
 GameObject:
   m_ObjectHideFlags: 0
@@ -3164,12 +3179,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
-    - target: {fileID: 6343973426568365172, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5603348776462572633, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7835f7c27085cdf458333a86049bc066, type: 3}
