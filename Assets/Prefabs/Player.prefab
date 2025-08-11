@@ -467,6 +467,7 @@ MonoBehaviour:
   modelRoot: {fileID: 6950019682450147148}
   _animator: {fileID: 8409328237412472519}
   explosion: {fileID: 6077065471061074559, guid: 1917047a08a544d4b9b2e191cf91205a, type: 3}
+  explodeOffset: 0.5
 --- !u!114 &6941393893527629677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,3 +617,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3846698652435678137, guid: 6a2eb437900137547ab741f36bb8b8a4, type: 3}
   bulletTransform: {fileID: 724538619903462486}
+  animShoot: {fileID: 7678557696542709168, guid: ee5b420a77fecfd449db882b603fe16a, type: 3}
