@@ -466,6 +466,7 @@ MonoBehaviour:
   arm: {fileID: 1757660649081277344}
   modelRoot: {fileID: 6950019682450147148}
   _animator: {fileID: 8409328237412472519}
+  explosion: {fileID: 6077065471061074559, guid: 1917047a08a544d4b9b2e191cf91205a, type: 3}
 --- !u!114 &6941393893527629677
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -155,10 +155,10 @@ TextureImporter:
       name: Eletric A-Sheet_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 236
-        width: 29
-        height: 48
+        x: 0
+        y: 192
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,10 +177,10 @@ TextureImporter:
       name: Eletric A-Sheet_1
       rect:
         serializedVersion: 2
-        x: 216
-        y: 230
-        width: 17
-        height: 25
+        x: 192
+        y: 192
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,10 +199,10 @@ TextureImporter:
       name: Eletric A-Sheet_2
       rect:
         serializedVersion: 2
-        x: 242
-        y: 248
-        width: 7
-        height: 33
+        x: 96
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,10 +221,10 @@ TextureImporter:
       name: Eletric A-Sheet_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 213
-        width: 35
-        height: 26
+        x: 0
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,10 +243,10 @@ TextureImporter:
       name: Eletric A-Sheet_4
       rect:
         serializedVersion: 2
-        x: 232
-        y: 233
-        width: 14
-        height: 14
+        x: 192
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,209 +261,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Eletric A-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 202
-        width: 16
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 809aac90d1e96e1d0800000000000000
-      internalID: -3321793827583645432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric A-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 219
-        y: 197
-        width: 20
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4d2536847211e61d0800000000000000
-      internalID: -3355725811928575276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric A-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 100
-        width: 9
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1577747881e07b610800000000000000
-      internalID: 1636792488084076369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric A-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 118
-        width: 19
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fae6625f368ead4f0800000000000000
-      internalID: -803074067519869265
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric A-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 33
-        width: 23
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bed16a3be8313e080800000000000000
-      internalID: -9159455713521164821
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric A-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 13
-        width: 10
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5f58c34b9a519d7e0800000000000000
-      internalID: -1740335962384464395
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric A-Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 235
-        y: 27
-        width: 19
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b6fc9707012af4650800000000000000
-      internalID: 6219367801912151915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric A-Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 4
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 74be1388cc1896350800000000000000
-      internalID: 6010477893160921927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric A-Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 231
-        y: 6
-        width: 8
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 921ea62e3b1b819c0800000000000000
-      internalID: -3956216886489063127
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b6b04668ee1712a41b40f1a2dbb7e910
     internalID: 0
     vertices: []
     indices: 
@@ -471,22 +273,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Eletric A-Sheet_0: -4050956828587923592
       Eletric A-Sheet_1: -6679910029127191355
-      Eletric A-Sheet_10: -1740335962384464395
-      Eletric A-Sheet_11: 6219367801912151915
-      Eletric A-Sheet_12: 6010477893160921927
-      Eletric A-Sheet_13: -3956216886489063127
       Eletric A-Sheet_2: -1762790638875795528
       Eletric A-Sheet_3: -4902331473897476504
       Eletric A-Sheet_4: -5998105193788091524
-      Eletric A-Sheet_5: -3321793827583645432
-      Eletric A-Sheet_6: -3355725811928575276
-      Eletric A-Sheet_7: 1636792488084076369
-      Eletric A-Sheet_8: -803074067519869265
-      Eletric A-Sheet_9: -9159455713521164821
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
