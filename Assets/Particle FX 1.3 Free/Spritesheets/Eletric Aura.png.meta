@@ -173,10 +173,10 @@ TextureImporter:
       name: Eletric Aura_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 151
-        width: 47
-        height: 34
+        x: 0
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,10 +195,10 @@ TextureImporter:
       name: Eletric Aura_1
       rect:
         serializedVersion: 2
-        x: 132
-        y: 167
-        width: 28
-        height: 18
+        x: 96
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +217,10 @@ TextureImporter:
       name: Eletric Aura_2
       rect:
         serializedVersion: 2
-        x: 310
-        y: 149
-        width: 55
-        height: 20
+        x: 192
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,10 +239,10 @@ TextureImporter:
       name: Eletric Aura_3
       rect:
         serializedVersion: 2
-        x: 415
-        y: 164
-        width: 37
-        height: 18
+        x: 288
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,10 +261,10 @@ TextureImporter:
       name: Eletric Aura_4
       rect:
         serializedVersion: 2
-        x: 23
-        y: 121
-        width: 50
-        height: 24
+        x: 384
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,10 +283,10 @@ TextureImporter:
       name: Eletric Aura_5
       rect:
         serializedVersion: 2
-        x: 116
-        y: 132
-        width: 59
-        height: 23
+        x: 0
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,10 +305,10 @@ TextureImporter:
       name: Eletric Aura_6
       rect:
         serializedVersion: 2
-        x: 213
-        y: 131
-        width: 55
-        height: 25
+        x: 96
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,297 +323,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Eletric Aura_7
-      rect:
-        serializedVersion: 2
-        x: 312
-        y: 123
-        width: 53
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: acc83a2a2fa1fa6a0800000000000000
-      internalID: -6435895713076114230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric Aura_8
-      rect:
-        serializedVersion: 2
-        x: 406
-        y: 139
-        width: 28
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7e4604c12056e3f10800000000000000
-      internalID: 2251347923470148839
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric Aura_9
-      rect:
-        serializedVersion: 2
-        x: 433
-        y: 142
-        width: 29
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 16c480a0bee9ef700800000000000000
-      internalID: 576072534672821345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric Aura_10
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 103
-        width: 26
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 06d63c6b4e8498f20800000000000000
-      internalID: 3425349138747977056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric Aura_11
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 102
-        width: 30
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 694b78eb815618ab0800000000000000
-      internalID: -5007610153709095786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric Aura_12
-      rect:
-        serializedVersion: 2
-        x: 219
-        y: 108
-        width: 45
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c346f700a938a4c60800000000000000
-      internalID: 7803194001829356604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric Aura_13
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 102
-        width: 37
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2b1f9377bb247bdb0800000000000000
-      internalID: -4776275506876517966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric Aura_14
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 68
-        width: 23
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 399c6fc1f806570f0800000000000000
-      internalID: -1119882764549174893
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric Aura_15
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 54
-        width: 49
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ab926587be0953ea0800000000000000
-      internalID: -5893645196333798982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric Aura_16
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 37
-        width: 57
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2e927a1ad7a3f99c0800000000000000
-      internalID: -3918348839531632158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric Aura_17
-      rect:
-        serializedVersion: 2
-        x: 26
-        y: 16
-        width: 49
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c1ea7ab9631b0a260800000000000000
-      internalID: 7106875060088450588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric Aura_18
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 27
-        width: 52
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 12ff8597f3a9a28d0800000000000000
-      internalID: -2870312215085777119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eletric Aura_19
-      rect:
-        serializedVersion: 2
-        x: 135
-        y: 6
-        width: 26
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f2673b9ac1e3981c0800000000000000
-      internalID: -4500998059752982993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b6160ed25d9db9d47966467ab6ae9ec2
     internalID: 0
     vertices: []
     indices: 
@@ -621,28 +335,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Eletric Aura_0: -6768570261983512148
       Eletric Aura_1: 2074332768552048465
-      Eletric Aura_10: 3425349138747977056
-      Eletric Aura_11: -5007610153709095786
-      Eletric Aura_12: 7803194001829356604
-      Eletric Aura_13: -4776275506876517966
-      Eletric Aura_14: -1119882764549174893
-      Eletric Aura_15: -5893645196333798982
-      Eletric Aura_16: -3918348839531632158
-      Eletric Aura_17: 7106875060088450588
-      Eletric Aura_18: -2870312215085777119
-      Eletric Aura_19: -4500998059752982993
       Eletric Aura_2: -423708213360539407
       Eletric Aura_3: 8041873697802322043
       Eletric Aura_4: -7134212155038361855
       Eletric Aura_5: -8436201167183659505
       Eletric Aura_6: 2874901198729772557
-      Eletric Aura_7: -6435895713076114230
-      Eletric Aura_8: 2251347923470148839
-      Eletric Aura_9: 576072534672821345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

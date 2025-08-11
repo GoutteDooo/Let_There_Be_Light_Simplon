@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 7923800304367469570}
   m_Layer: 6
   m_Name: Target
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,6 +230,7 @@ MonoBehaviour:
   isTargetActive: 0
   Inactive: {fileID: 6994976077806249654}
   Active: {fileID: 1923087448334307459}
+  targetHitAnimation: {fileID: 8928868883230656778, guid: de175deb9698c9b47b8a00e90642a2bd, type: 3}
 --- !u!1 &6994976077806249654
 GameObject:
   m_ObjectHideFlags: 0

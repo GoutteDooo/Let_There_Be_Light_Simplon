@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviour
 {
+    public static RoomManager Instance;
+
     public GameObject[] roomPrefabs;
     public GameObject currentRoomInstance;
     private int currentRoomIndex = 0;
@@ -12,9 +14,22 @@ public class RoomManager : MonoBehaviour
     private bool roomJustLoaded = true;
     public GameObject bDisplay;
 
+    private void Awake()
+    {
+        // Simple singleton setup
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
     void Start()
     {
-        currentRoomIndex = 13;//DEV
+        currentRoomIndex = 0;//DEV
         LoadRoom(currentRoomIndex);//DEV
         //LoadRoom(0); // Début du jeu
     }
@@ -88,7 +103,7 @@ public class RoomManager : MonoBehaviour
         }
     }
 
-    void LoadRoom(int index)
+    public void LoadRoom(int index)
     {
         // Détruire la room actuelle
         if (currentRoomInstance != null)
@@ -99,6 +114,14 @@ public class RoomManager : MonoBehaviour
 
         failCheckTimer = 0f;
         roomJustLoaded = true;
+
+        var roomMusic = currentRoomInstance.GetComponentInChildren<RoomMusic>(true);
+        if (roomMusic && roomMusic.playOnSpawn && roomMusic.clip)
+        {
+            // Si la musique change
+            if (MusicManager.Instance.CurrentClip != roomMusic.clip)
+                MusicManager.Instance.Play(roomMusic.clip, roomMusic.loop, roomMusic.fade, roomMusic.replayOnLoop);
+        }
 
         // Affichage UI des bullets
         BulletsCountdownLogic ui = GameObject.FindFirstObjectByType<BulletsCountdownLogic>();
@@ -112,6 +135,9 @@ public class RoomManager : MonoBehaviour
         // Récupère les targets dans cette room
         currentTargets = currentRoomInstance.GetComponentsInChildren<TargetScript>();
 
+        // Stop les sfx en cours (s'il y'en a)
+        SFXManager.Instance.StopAllLoopSFX();
+
         // Et on joue
         if (roomJustLoaded) // On attend que la transition se fasse avant
             GameStateManager.Instance.SetState(GameState.Playing);
@@ -120,7 +146,7 @@ public class RoomManager : MonoBehaviour
     public void LoadNextRoom()
     {
         currentRoomIndex++;
-        if (currentRoomIndex < roomPrefabs.Length)
+        if (currentRoomIndex < roomPrefabs.Length -1)
         {
             LoadRoom(currentRoomIndex);
         }
