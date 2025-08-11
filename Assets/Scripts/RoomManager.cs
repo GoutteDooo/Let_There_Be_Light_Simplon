@@ -13,7 +13,8 @@ public class RoomManager : MonoBehaviour
     private float failCheckTimer = 0f;
     private bool roomJustLoaded = true;
     public GameObject bDisplay;
-
+    public static int easterEggRoomIndex = 14;
+    public static int endingRoom = 15;
     private void Awake()
     {
         // Simple singleton setup
@@ -145,22 +146,25 @@ public class RoomManager : MonoBehaviour
 
     public void LoadNextRoom()
     {
-        if (currentRoomIndex == 14)
+        // Easter Egg
+        if (currentRoomIndex == easterEggRoomIndex)
         {
             currentRoomIndex = 0;
         }
-        currentRoomIndex++;
-        if (currentRoomIndex < roomPrefabs.Length -1)
+        else if (currentRoomIndex == endingRoom - 2) // -2 car easterEgg = 14 (pas maintenable à long terme)
         {
-            LoadRoom(currentRoomIndex);
-        }
-        else
-        {
+            // Ending Screen
             bDisplay.SetActive(false);
             levelCompleteMenu.SetActive(false);
             SceneManager.LoadScene("EndScreen");
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName("EndScreen"));
-            SceneManager.UnloadSceneAsync("Rooms");
+            LoadRoom(endingRoom); // On instancie une room dans EndScreen pour la musique
+            return;
+        }
+
+        currentRoomIndex++;
+        if (currentRoomIndex < roomPrefabs.Length - 1)
+        {
+            LoadRoom(currentRoomIndex);
         }
     }
 
@@ -185,7 +189,7 @@ public class RoomManager : MonoBehaviour
 
         // V�rifier si au moins une target est inactive
         bool allTargetsActive = true;
-        foreach(var target in currentTargets)
+        foreach (var target in currentTargets)
         {
             if (!target.isTargetActive)
             {

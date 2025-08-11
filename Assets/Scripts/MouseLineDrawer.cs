@@ -25,6 +25,8 @@ public class MouseLineDrawer : MonoBehaviour
         lineRenderer.positionCount = 2;
         lineRenderer.SetPosition(0, origin);
         lineRenderer.SetPosition(1, endPos);
+        lineRenderer.sortingLayerName = "Default"; // ou un autre layer existant
+        lineRenderer.sortingOrder = 100;
 
         // Clic = figer la ligne
         if (Input.GetMouseButtonDown(0))

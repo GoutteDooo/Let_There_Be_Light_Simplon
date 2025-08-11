@@ -181,6 +181,7 @@ MonoBehaviour:
   defaultFade: 1.5
   persistAcrossScenes: 1
   sceneTracks: []
+  startClip: {fileID: 8300000, guid: e8ea5b0a0749e1946b3ec6ed6ab8dbb2, type: 3}
 --- !u!1 &195303470
 GameObject:
   m_ObjectHideFlags: 0
