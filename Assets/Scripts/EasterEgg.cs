@@ -7,7 +7,7 @@ public class EasterEgg : MonoBehaviour
         Debug.Log("Easter Egg Activated");
         if (collision.gameObject.GetComponent<BulletController>() != null)
         {
-            RoomManager.Instance.currentRoomIndex = 14;
+            RoomManager.Instance.currentRoomIndex = RoomManager.easterEggRoomIndex;
             RoomManager.Instance.LoadRoom(RoomManager.Instance.currentRoomIndex); // Singleton call
         }
     }

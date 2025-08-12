@@ -1904,9 +1904,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3139750772584274246}
   - component: {fileID: 4615856594642707484}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Props-01_2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3857,7 +3857,7 @@ GameObject:
   - component: {fileID: 5285787993482700879}
   - component: {fileID: 1017982560606302794}
   - component: {fileID: 5629173997403100081}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke2-Sheet_41 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3967,7 +3967,7 @@ GameObject:
   - component: {fileID: 4601191057419593293}
   - component: {fileID: 7031077961558593193}
   - component: {fileID: 3765227251003448951}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke2-Sheet_41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5881,7 +5881,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 980237544367227190, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_SortingOrder
-      value: 100
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 2771197722028926867, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_Name
@@ -5959,7 +5959,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 980237544367227190, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_SortingOrder
-      value: 100
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 2771197722028926867, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_Name
@@ -6124,7 +6124,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 980237544367227190, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_SortingOrder
-      value: 100
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 2771197722028926867, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_Name
@@ -6202,7 +6202,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 980237544367227190, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_SortingOrder
-      value: 100
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 2771197722028926867, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_Name
@@ -6454,7 +6454,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 980237544367227190, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_SortingOrder
-      value: 100
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 2771197722028926867, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_Name
@@ -6615,7 +6615,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 980237544367227190, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_SortingOrder
-      value: 100
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 2771197722028926867, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_Name
@@ -6750,6 +6750,10 @@ PrefabInstance:
     - target: {fileID: 8075069808521164849, guid: f984cfd2d5728d841a1cd238887cfe22, type: 3}
       propertyPath: m_Name
       value: DeadZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075069808521164849, guid: f984cfd2d5728d841a1cd238887cfe22, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2805879625918205679, guid: f984cfd2d5728d841a1cd238887cfe22, type: 3}
@@ -6927,7 +6931,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 980237544367227190, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_SortingOrder
-      value: 100
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 2771197722028926867, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_Name
@@ -7005,7 +7009,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 980237544367227190, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_SortingOrder
-      value: 100
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 2771197722028926867, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_Name
@@ -7083,7 +7087,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 980237544367227190, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_SortingOrder
-      value: 100
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 2771197722028926867, guid: ae6fd5542ab4b8c49ba84726995d6625, type: 3}
       propertyPath: m_Name

@@ -33,6 +33,8 @@ public class MusicManager : MonoBehaviour
     private Coroutine _playlistCo;
     private Coroutine _customLoopCo;
 
+    public AudioClip startClip;
+
     [System.Serializable]
     public class SceneTrack
     {
@@ -76,6 +78,10 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        Play(startClip, true, -1, 0);
+    }
     // ----- API PUBLIQUE -----
 
     /// <summary>Lecture immédiate avec loop start optionnel</summary>
