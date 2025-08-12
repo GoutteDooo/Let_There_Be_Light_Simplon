@@ -21,21 +21,18 @@ public class MenuLogic : MonoBehaviour
 
     void Update()
     {
-        if (menu.activeInHierarchy)
-        {
-            QuitGame();            
-        }
+          QuitGame();            
     }
 
     public void QuitGame()
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            #if UNITY_EDITOR
-                        UnityEditor.EditorApplication.isPlaying = false; // Stop Play Mode in Editor
-            #else
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false; // Stop Play Mode in Editor
+#else
                         Application.Quit(); // Close game in build
-            #endif
+#endif
             Debug.Log("Quit Game");
         }
     }

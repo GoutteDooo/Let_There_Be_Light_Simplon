@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 143839063}
   - component: {fileID: 143839062}
   - component: {fileID: 143839064}
+  - component: {fileID: 143839065}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -182,6 +183,18 @@ MonoBehaviour:
   persistAcrossScenes: 1
   sceneTracks: []
   startClip: {fileID: 8300000, guid: e8ea5b0a0749e1946b3ec6ed6ab8dbb2, type: 3}
+--- !u!114 &143839065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143839061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767b8d1632d2df840b101a8ca57028ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &195303470
 GameObject:
   m_ObjectHideFlags: 0
