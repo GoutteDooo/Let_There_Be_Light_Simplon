@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class MenuLogic : MonoBehaviour
 {
@@ -16,5 +17,26 @@ public class MenuLogic : MonoBehaviour
 
         // Remplace la scene StartScreen par la scene Rooms
         SceneManager.LoadScene("Rooms");
+    }
+
+    void Update()
+    {
+        if (menu.activeInHierarchy)
+        {
+            QuitGame();            
+        }
+    }
+
+    public void QuitGame()
+    {
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            #if UNITY_EDITOR
+                        UnityEditor.EditorApplication.isPlaying = false; // Stop Play Mode in Editor
+            #else
+                        Application.Quit(); // Close game in build
+            #endif
+            Debug.Log("Quit Game");
+        }
     }
 }
